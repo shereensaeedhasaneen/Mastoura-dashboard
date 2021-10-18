@@ -1,8 +1,12 @@
 $red-color:#df2024;
 $header-bg:#f7f7f7;
+section{
+    padding:0 3%;
+}
 nav{
-    padding:0 2%;
+   
     background: $header-bg;
+    padding:0 2%;
     .user-photo{
         width: 60px;
         height: 60px;
@@ -60,6 +64,7 @@ nav{
        }
        
        .box{
+           z-index: 2;
          width: 350px;
          height: 0px;
          border-radius: 10px;
@@ -95,7 +100,7 @@ nav{
        }
        
        .notBtn:hover .box{
-         height: 30vh !important
+         height: 45vh !important
        }
        
        .content{
@@ -158,6 +163,10 @@ nav{
       .new{
         border-style: none none solid none;
         border-color: gray;
+        p{
+            color: $red-color;
+        }
+
       }
       
       .sec:hover{
