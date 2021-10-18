@@ -1,12 +1,137 @@
+nav {
+  padding: 0 2%;
+  background: #f7f7f7;
+}
 nav .user-photo {
-  width: 46.86px;
-  height: 46.94px;
+  width: 60px;
+  height: 60px;
   background: #df2024;
   border: 3px solid #d9d9d9;
   border-radius: 50%;
+  margin-right: 23px;
 }
 nav .notification {
   align-items: center;
+}
+nav .notification {
+  position: relative;
+  display: inline-block;
+}
+nav .number {
+  height: 22px;
+  width: 22px;
+  background-color: #df2024;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 27px;
+  left: 55px;
+  padding: 3px;
+  border-style: solid;
+  border-width: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+nav .number:empty {
+  display: none;
+}
+nav .notBtn {
+  transition: 0.5s;
+  cursor: pointer;
+}
+nav .fas {
+  font-size: 23pt;
+  padding-bottom: 10px;
+  color: #AAAAAA;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+nav .box {
+  width: 350px;
+  height: 0px;
+  border-radius: 10px;
+  transition: 0.5s;
+  position: absolute;
+  overflow-y: scroll;
+  padding: 0px;
+  left: 0%;
+  margin-top: 5px;
+  background-color: #F4F4F4;
+  -webkit-box-shadow: 10px 10px 23px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 10px 10px 23px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 23px 0px rgba(0, 0, 0, 0.1);
+  cursor: context-menu;
+}
+nav .box::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+}
+nav .box::-webkit-scrollbar-thumb {
+  background-color: #3b3b3b;
+  border: 2px solid #3b3b3b;
+  border-radius: 5px;
+}
+nav .fas:hover {
+  color: #df2024;
+}
+nav .notBtn:hover .box {
+  height: 30vh !important;
+}
+nav .content {
+  padding: 20px;
+  color: black;
+  vertical-align: middle;
+  text-align: left;
+}
+nav .gry {
+  background-color: #F4F4F4;
+}
+nav .top {
+  color: black;
+  padding: 10px;
+}
+nav .display {
+  position: relative;
+}
+nav .cont {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F4F4F4;
+}
+nav .cont:empty {
+  display: none;
+}
+nav .stick {
+  text-align: center;
+  display: block;
+  font-size: 50pt;
+  padding-top: 70px;
+  padding-left: 80px;
+}
+nav .stick:hover {
+  color: black;
+}
+nav .cent {
+  text-align: center;
+  display: block;
+}
+nav .sec {
+  padding: 25px 10px;
+  background-color: #F4F4F4;
+  transition: 0.5s;
+}
+nav .new {
+  border-style: none none solid none;
+  border-color: gray;
+}
+nav .sec:hover {
+  background-color: #BFBFBF;
 }
 
 .table-responsive thead tr th {
