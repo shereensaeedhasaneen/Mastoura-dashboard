@@ -9,4 +9,32 @@ nav .notification {
   align-items: center;
 }
 
+.table-responsive thead tr th {
+  font-family: "Tajawal";
+  font-weight: normal;
+  font-size: 16px;
+  color: #14172e;
+  padding: 22px 10px;
+}
+.table-responsive .control__indicator {
+  background-color: #fff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.table-responsive .control__indicator span {
+  background: #DF2024;
+  width: 10px;
+  height: 10px;
+  transform: 0.3s;
+  opacity: 0;
+}
+.table-responsive .control input:checked ~ .control__indicator:after {
+  display: none;
+}
+.table-responsive .control input:checked ~ .control__indicator span {
+  opacity: 1;
+  transform: 0.3s;
+}
+
 /*# sourceMappingURL=main.css.map */

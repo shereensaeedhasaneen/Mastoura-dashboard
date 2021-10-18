@@ -1,0 +1,33 @@
+.table-responsive {
+    thead {
+        tr {
+            th {
+                font-family: 'Tajawal';
+                font-weight: normal;
+                font-size: 16px;
+                color: #14172e;
+                padding: 22px 10px;
+            }
+        }
+    }
+    .control__indicator {
+        background-color: #fff !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span {
+            background: $mainCol;
+            width: 10px;
+            height: 10px;
+            transform: .3s;
+            opacity: 0;
+        }
+    }
+    .control input:checked~.control__indicator:after {
+        display: none;
+    }
+    .control input:checked~.control__indicator span {
+        opacity: 1;
+        transform: .3s;
+    }
+}
