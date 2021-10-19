@@ -21,6 +21,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/nice-select.css">
 </head>
 
 <body>
@@ -151,7 +153,50 @@
         </div>
     </nav>
 
-    <section class="mt-5">
+  
+    <section class="pt-5 pb-5 bg-light">
+        <!--Popup-->
+<!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12 mb-4">
+                <select name="" id="">
+                  <option selected value="1">اختار الشريك</option>
+                  <option value="2">test</option>
+                  <option value="3">test</option>
+                  <option value="4">test</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <p class="notes mb-2">ملاحظات</p>
+
+                <input type="text" placeholder=" اتلتال تالتا تاملات س لنمو تاكا مالنا الكخ لبي اكح؛ن يقغتعب أنسب بردلك زز ">
+              </div>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="modal-footer d-flex justify-content-center">
+
+                  <div class="col-8">
+                    <button type="button" class="done">تعيين</button>
+                  </div>
+                 
+                  <div class="col-3">
+                    <button type="button" class="cancel" data-bs-dismiss="modal">الغاء</button>
+                  </div>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end popup-->
         <div class="container-fauld">
             
             <div class="row">
@@ -173,24 +218,35 @@
                 <div class="col-9">
                   <div class="row mb-5">
                     <div class="col-sm-4">
-                        <input class="search"  placeholder="بحث">
+                        <!--<input class="search"  placeholder="بحث">
                         <svg id="Research" xmlns="http://www.w3.org/2000/svg" width="26.503" height="26.602" viewBox="0 0 26.503 26.602">
                           <path id="Vector" d="M25.3,19.712l-2.76-2.827a4.107,4.107,0,0,0-4.533-.76l-1.2-1.2a9.333,9.333,0,1,0-1.88,1.88l1.187,1.187a4,4,0,0,0,.707,4.613l2.827,2.827a4.021,4.021,0,1,0,5.653-5.72ZM13.992,14.059a6.667,6.667,0,1,1,1.45-2.165,6.667,6.667,0,0,1-1.45,2.165Zm9.427,9.427a1.333,1.333,0,0,1-1.893,0L18.7,20.659a1.339,1.339,0,1,1,1.893-1.893l2.827,2.827a1.333,1.333,0,0,1,0,1.893Z" transform="translate(0 0)" fill="#df2024"/>
-                        </svg>
+                        </svg>-->
+
+
+                        <div class="input-group mb-3 search">
+                          <button class="btn btn-outline-secondary btn-icon" type="button" id="button-addon2"><svg id="Research" xmlns="http://www.w3.org/2000/svg" width="26.503" height="26.602" viewBox="0 0 26.503 26.602">
+                            <path id="Vector" d="M25.3,19.712l-2.76-2.827a4.107,4.107,0,0,0-4.533-.76l-1.2-1.2a9.333,9.333,0,1,0-1.88,1.88l1.187,1.187a4,4,0,0,0,.707,4.613l2.827,2.827a4.021,4.021,0,1,0,5.653-5.72ZM13.992,14.059a6.667,6.667,0,1,1,1.45-2.165,6.667,6.667,0,0,1-1.45,2.165Zm9.427,9.427a1.333,1.333,0,0,1-1.893,0L18.7,20.659a1.339,1.339,0,1,1,1.893-1.893l2.827,2.827a1.333,1.333,0,0,1,0,1.893Z" transform="translate(0 0)" fill="#df2024"/>
+                          </svg></button>
+                          <input type="text" class="form-control " placeholder="بحث" aria-label="Recipient's username" aria-describedby="button-addon2">
+                          
+                        </div>
                     </div>
       
-                    <div class="col-sm-4">
-                      kfkkf
+                    <div class="col-sm-4 d-flex justify-content-center">
+                        <a class="search-btn">بحث</a>
                      </div>
       
                      <div class="col-sm-4">
-                      kfkkf
-       
+                        <div class="num-order">
+                          <span>١٤</span> طلب جديد
+                        </div>
                      </div>
                   </div>
 
                     <div class="table-responsive">
                         <table class="table custom-table">
+                          
                             <thead>
                                 <tr>
                                     <th scope="col">
@@ -225,8 +281,12 @@
                                     </td>
                                     <td>١١،٥٠٠ جنيه</td>
                                     <td>فرع البنك</td>
-                                    <td>تمت الموافقة</td>
                                     <td>
+                                        <div class="green">
+                                           تمت الموافقة 
+                                        </div>
+                                     </td>
+                                    <td class="pt-39">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
                         <path id="Vector"
                           d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
@@ -253,12 +313,94 @@
                                     </td>
                                     <td>١١،٥٠٠ جنيه</td>
                                     <td>فرع البنك</td>
-                                    <td>تمت الموافقة</td>
-                                    <td></td>
+                                    <td> 
+                                      <div class="orange">
+                                          قيد الدراسه  
+                                      </div>
+                                    </td>
+                                    <td class="pt-39">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                                        <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
+                                      </svg>
+                                    </td>
                                 </tr>
 
+                                <tr>
+                                  <th scope="row">
+                                      <label class="control control--checkbox px-1">
+                      <input type="checkbox" />
+                      <div class="control__indicator"><span></span></div>
+                    </label>
+                                  </th>
+                                  <td>
+                                      ١٢٣٤٥٦٥
+                                  </td>
+                                  <td>٧ سبتمبر ٢٠٢١</td>
+                                  <td>
+                                      منى عبدالله حسين
+                                  </td>
+                                  <td>١١،٥٠٠ جنيه</td>
+                                  <td>
+                                    <div class="dark-red" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                      تعيين  
+                                   </div>
+                                  </td>
+                                  <td>
+                                      <div class="red">
+                                         مرفوض  
+                                      </div>
+                                   </td>
+                                  <td class="pt-39">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                      <path id="Vector"
+                        d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
+                        fill="#454545" />
+                    </svg>
+
+                                  </td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">
+                                    <label class="control control--checkbox px-1">
+                    <input type="checkbox" />
+                    <div class="control__indicator"><span></span></div>
+                  </label>
+                                </th>
+                                <td>
+                                    ١٢٣٤٥٦٥
+                                </td>
+                                <td>٧ سبتمبر ٢٠٢١</td>
+                                <td>
+                                    منى عبدالله حسين
+                                </td>
+                                <td>١١،٥٠٠ جنيه</td>
+                                <td>فرع البنك</td>
+                                <td>
+                                    <div class="green">
+                                       تمت الموافقة 
+                                    </div>
+                                 </td>
+                                <td class="pt-39">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                    <path id="Vector"
+                      d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
+                      fill="#454545" />
+                  </svg>
+
+                                </td>
+                            </tr>
+
+                           
                             </tbody>
+                                                   
                         </table>
+
+                        <div class="pagination d-flex justify-content-center">
+                          <a href="#" class="pagination-num active">1</a>
+                          <a href="#" class="pagination-num">2</a>
+                          <a href="#" class="pagination-num">3</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -268,9 +410,23 @@
         </div>
     </section>
 
+    <footer>
+      <div class="row justify-content-end align-items-center h-100">
+          <div class="col-4">
+            <p class="footer-text">® جميع الحقوق محفوظة | بنك ناصر الاجتماعي</p>
+          </div>
+      </div>
+  </footer>
+
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("select").niceSelect();
+        })
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html
