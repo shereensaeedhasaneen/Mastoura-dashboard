@@ -473,7 +473,7 @@ ul.nav-tabs li a {
   flex-direction: column;
   padding-top: 20px;
   position: sticky;
-  top: 5px;
+  top: 15px;
   right: 10px;
 }
 .sidebar a {
