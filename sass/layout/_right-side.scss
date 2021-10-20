@@ -1,7 +1,7 @@
 $gray: #6c6c6c;
 .search
     {
-        width: 90%;
+        width: 100%;
         &:focus{
             outline: none !important;
             box-shadow: none;
@@ -65,7 +65,9 @@ $gray: #6c6c6c;
     align-items: center;
     flex-direction: column;
     padding-top: 20px;
-
+    position: sticky;
+    top: 5px;
+    right: 10px;
     a{
         width: 90%;
         display: inline-flex;
@@ -84,10 +86,22 @@ $gray: #6c6c6c;
 
     .red-color{
         background: $mainCol;
+        transition: 0.5s;
+        &:hover{
+            background: transparent;
+            border: 1px solid $mainCol;
+            color: $mainCol;
+        }
     }
 
     .gray-color{
         background: $gray;
+        transition: 0.5s;
+        &:hover{
+            background: transparent;
+            border: 1px solid $gray;
+            color: $gray;
+        }
     }
 
     .seprator{
@@ -112,3 +126,4 @@ $gray: #6c6c6c;
 
     }
 }
+

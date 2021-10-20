@@ -25,5 +25,19 @@ $(function() {
   });
 
     
+  $(" tbody tr th input[type='checkbox']").change(function(){
+    var a = $("tbody tr th input[type='checkbox']");
+    if(a.length == a.filter(":checked").length){
+        //alert('all checked');
+        $('.js-check-all').prop('checked', true);
+    }
+
+    else{
+      $('.js-check-all').prop('checked', false);
+    }
+});
+
+
+
 
 });

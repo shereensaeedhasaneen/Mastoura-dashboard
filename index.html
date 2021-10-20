@@ -9,6 +9,8 @@
     <!--Bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
     <!--Project Style-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main-forms.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
     <!--fontAwesome-->
@@ -23,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/nice-select.css">
+   
 </head>
 
 <body>
@@ -153,8 +156,7 @@
         </div>
     </nav>
 
-  
-    <section class="pt-5 pb-5 bg-light">
+    <section class="pt-5 pb-5" style="background: url(img/Group\ 52.png) #F7F7F7 no-repeat; background-size: cover; background-position: center;">
         <!--Popup-->
 <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -203,9 +205,23 @@
               <!--Right Side -->
                 <div class="col-3">
                   <div class="sidebar">
-                      <a href="#" class="gray-color">طلبات القروض </a>
+                    
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item active" role="presentation">
+                        <a href="#" class="gray-color" id="All-applications-tab"  data-bs-toggle="tab" data-bs-target="#All-applications" type="button" role="tab" aria-controls="All-applications" aria-selected="true">طلبات القروض </a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a href="#" class="red-color"  id="New-application-tab" data-bs-toggle="tab" data-bs-target="#New-application" type="button" role="tab" aria-controls="New-application" aria-selected="false"> بدء طلب جديد </a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a href="#" class="red-color"  id="complete-application-tab" data-bs-toggle="tab" data-bs-target="#complete-application" type="button" role="tab" aria-controls="complete-application" aria-selected="false"> استكمال طلب </a>
+                      </li>
+                    </ul>
+
+                      <!--<a href="#" class="gray-color">طلبات القروض </a>
                       <a href="#" class="red-color"> بدء طلب جديد </a>
-                      <a href="#" class="red-color"> استكمال طلب </a>
+                      <a href="#" class="red-color"> استكمال طلب </a>-->
+
                       <div class="seprator">
                       </div>
 
@@ -216,197 +232,1513 @@
                 </div>
               <!--End Right Side -->
                 <div class="col-9">
-                  <div class="row mb-5">
-                    <div class="col-sm-4">
-                        <!--<input class="search"  placeholder="بحث">
-                        <svg id="Research" xmlns="http://www.w3.org/2000/svg" width="26.503" height="26.602" viewBox="0 0 26.503 26.602">
-                          <path id="Vector" d="M25.3,19.712l-2.76-2.827a4.107,4.107,0,0,0-4.533-.76l-1.2-1.2a9.333,9.333,0,1,0-1.88,1.88l1.187,1.187a4,4,0,0,0,.707,4.613l2.827,2.827a4.021,4.021,0,1,0,5.653-5.72ZM13.992,14.059a6.667,6.667,0,1,1,1.45-2.165,6.667,6.667,0,0,1-1.45,2.165Zm9.427,9.427a1.333,1.333,0,0,1-1.893,0L18.7,20.659a1.339,1.339,0,1,1,1.893-1.893l2.827,2.827a1.333,1.333,0,0,1,0,1.893Z" transform="translate(0 0)" fill="#df2024"/>
-                        </svg>-->
+                  <div class="tab-content" id="myTabContent">
+                    <!--All Applications #tab1-->
+                    <div class="tab-pane fade show active" id="All-applications" role="tabpanel" aria-labelledby="All-applications-tab">
+                        <div class="row mb-2">
+                          <div class="col-sm-4">
+                              <!--<input class="search"  placeholder="بحث">
+                              <svg id="Research" xmlns="http://www.w3.org/2000/svg" width="26.503" height="26.602" viewBox="0 0 26.503 26.602">
+                                <path id="Vector" d="M25.3,19.712l-2.76-2.827a4.107,4.107,0,0,0-4.533-.76l-1.2-1.2a9.333,9.333,0,1,0-1.88,1.88l1.187,1.187a4,4,0,0,0,.707,4.613l2.827,2.827a4.021,4.021,0,1,0,5.653-5.72ZM13.992,14.059a6.667,6.667,0,1,1,1.45-2.165,6.667,6.667,0,0,1-1.45,2.165Zm9.427,9.427a1.333,1.333,0,0,1-1.893,0L18.7,20.659a1.339,1.339,0,1,1,1.893-1.893l2.827,2.827a1.333,1.333,0,0,1,0,1.893Z" transform="translate(0 0)" fill="#df2024"/>
+                              </svg>-->
 
 
-                        <div class="input-group mb-3 search">
-                          <button class="btn btn-outline-secondary btn-icon" type="button" id="button-addon2"><svg id="Research" xmlns="http://www.w3.org/2000/svg" width="26.503" height="26.602" viewBox="0 0 26.503 26.602">
-                            <path id="Vector" d="M25.3,19.712l-2.76-2.827a4.107,4.107,0,0,0-4.533-.76l-1.2-1.2a9.333,9.333,0,1,0-1.88,1.88l1.187,1.187a4,4,0,0,0,.707,4.613l2.827,2.827a4.021,4.021,0,1,0,5.653-5.72ZM13.992,14.059a6.667,6.667,0,1,1,1.45-2.165,6.667,6.667,0,0,1-1.45,2.165Zm9.427,9.427a1.333,1.333,0,0,1-1.893,0L18.7,20.659a1.339,1.339,0,1,1,1.893-1.893l2.827,2.827a1.333,1.333,0,0,1,0,1.893Z" transform="translate(0 0)" fill="#df2024"/>
-                          </svg></button>
-                          <input type="text" class="form-control " placeholder="بحث" aria-label="Recipient's username" aria-describedby="button-addon2">
-                          
+                              <div class="input-group mb-3 search">
+                                <button class="btn btn-outline-secondary btn-icon" type="button" id="button-addon2"><svg id="Research" xmlns="http://www.w3.org/2000/svg" width="26.503" height="26.602" viewBox="0 0 26.503 26.602">
+                                  <path id="Vector" d="M25.3,19.712l-2.76-2.827a4.107,4.107,0,0,0-4.533-.76l-1.2-1.2a9.333,9.333,0,1,0-1.88,1.88l1.187,1.187a4,4,0,0,0,.707,4.613l2.827,2.827a4.021,4.021,0,1,0,5.653-5.72ZM13.992,14.059a6.667,6.667,0,1,1,1.45-2.165,6.667,6.667,0,0,1-1.45,2.165Zm9.427,9.427a1.333,1.333,0,0,1-1.893,0L18.7,20.659a1.339,1.339,0,1,1,1.893-1.893l2.827,2.827a1.333,1.333,0,0,1,0,1.893Z" transform="translate(0 0)" fill="#df2024"/>
+                                </svg></button>
+                                <input type="text" class="form-control " placeholder="بحث" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                
+                              </div>
+                          </div>
+            
+                          <div class="col-sm-4 d-flex justify-content-center">
+                              <a class="search-btn">بحث</a>
+                          </div>
+            
+                          <div class="col-sm-4 d-flex justify-content-end">
+                              <div class="num-order">
+                                <span>١٤</span> طلب جديد
+                              </div>
+                          </div>
                         </div>
-                    </div>
-      
-                    <div class="col-sm-4 d-flex justify-content-center">
-                        <a class="search-btn">بحث</a>
-                     </div>
-      
-                     <div class="col-sm-4">
-                        <div class="num-order">
-                          <span>١٤</span> طلب جديد
-                        </div>
-                     </div>
-                  </div>
 
-                    <div class="table-responsive">
-                        <table class="table custom-table">
-                          
-                            <thead>
-                                <tr>
-                                    <th scope="col">
-                                        <label class="control control--checkbox px-1">
-                                          <input type="checkbox" class="js-check-all" />
-                                          <div class="control__indicator"><span></span></div>
-                                        </label>
-                                    </th>
-                                    <th scope="col">رقم الطلب</th>
-                                    <th scope="col">التاريخ</th>
-                                    <th scope="col">الاسم</th>
-                                    <th scope="col">قيمة القرض</th>
-                                    <th scope="col">الشريك</th>
-                                    <th scope="col">حالة الطلب</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">
-                                        <label class="control control--checkbox px-1">
-                        <input type="checkbox" />
-                        <div class="control__indicator"><span></span></div>
-                      </label>
-                                    </th>
-                                    <td>
-                                        ١٢٣٤٥٦٥
-                                    </td>
-                                    <td>٧ سبتمبر ٢٠٢١</td>
-                                    <td>
-                                        منى عبدالله حسين
-                                    </td>
-                                    <td>١١،٥٠٠ جنيه</td>
-                                    <td>فرع البنك</td>
-                                    <td>
-                                        <div class="green">
-                                           تمت الموافقة 
+                          <div class="table-responsive">
+                              <table class="table custom-table">
+                                
+                                  <thead>
+                                      <tr>
+                                          <th scope="col">
+                                              <label class="control control--checkbox px-1">
+                                                <input type="checkbox" class="js-check-all" />
+                                                <div class="control__indicator"><span></span></div>
+                                              </label>
+                                          </th>
+                                          <th scope="col">رقم الطلب</th>
+                                          <th scope="col">التاريخ</th>
+                                          <th scope="col">الاسم</th>
+                                          <th scope="col">قيمة القرض</th>
+                                          <th scope="col">الشريك</th>
+                                          <th scope="col">حالة الطلب</th>
+                                          <th scope="col"></th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                          <th scope="row">
+                                              <label class="control control--checkbox px-1">
+                              <input type="checkbox" />
+                              <div class="control__indicator"><span></span></div>
+                            </label>
+                                          </th>
+                                          <td>
+                                              ١٢٣٤٥٦٥
+                                          </td>
+                                          <td>٧ سبتمبر ٢٠٢١</td>
+                                          <td>
+                                              منى عبدالله حسين
+                                          </td>
+                                          <td>١١،٥٠٠ جنيه</td>
+                                          <td>فرع البنك</td>
+                                          <td>
+                                              <div class="green">
+                                                تمت الموافقة 
+                                              </div>
+                                          </td>
+                                          <td class="pt-39">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                              <path id="Vector"
+                                d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
+                                fill="#454545" />
+                            </svg>
+
+                                          </td>
+                                      </tr>
+
+
+                                      <tr>
+                                          <th scope="row">
+                                              <label class="control control--checkbox px-1">
+                              <input type="checkbox" />
+                              <div class="control__indicator"><span></span></div>
+                            </label>
+                                          </th>
+                                          <td>
+                                              ١٢٣٤٥٦٥
+                                          </td>
+                                          <td>٧ سبتمبر ٢٠٢١</td>
+                                          <td>
+                                              منى عبدالله حسين
+                                          </td>
+                                          <td>١١،٥٠٠ جنيه</td>
+                                          <td>فرع البنك</td>
+                                          <td> 
+                                            <div class="orange">
+                                                قيد الدراسه  
+                                            </div>
+                                          </td>
+                                          <td class="pt-39">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                                              <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
+                                            </svg>
+                                          </td>
+                                      </tr>
+
+                                      <tr>
+                                        <th scope="row">
+                                            <label class="control control--checkbox px-1">
+                            <input type="checkbox" />
+                            <div class="control__indicator"><span></span></div>
+                          </label>
+                                        </th>
+                                        <td>
+                                            ١٢٣٤٥٦٥
+                                        </td>
+                                        <td>٧ سبتمبر ٢٠٢١</td>
+                                        <td>
+                                            منى عبدالله حسين
+                                        </td>
+                                        <td>١١،٥٠٠ جنيه</td>
+                                        <td>
+                                          <div class="dark-red" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                            تعيين  
                                         </div>
-                                     </td>
-                                    <td class="pt-39">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
-                        <path id="Vector"
-                          d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
-                          fill="#454545" />
-                      </svg>
+                                        </td>
+                                        <td>
+                                            <div class="red">
+                                              مرفوض  
+                                            </div>
+                                        </td>
+                                        <td class="pt-39">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                            <path id="Vector"
+                              d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
+                              fill="#454545" />
+                          </svg>
 
-                                    </td>
-                                </tr>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                      <th scope="row">
+                                          <label class="control control--checkbox px-1">
+                          <input type="checkbox" />
+                          <div class="control__indicator"><span></span></div>
+                        </label>
+                                      </th>
+                                      <td>
+                                          ١٢٣٤٥٦٥
+                                      </td>
+                                      <td>٧ سبتمبر ٢٠٢١</td>
+                                      <td>
+                                          منى عبدالله حسين
+                                      </td>
+                                      <td>١١،٥٠٠ جنيه</td>
+                                      <td>فرع البنك</td>
+                                      <td>
+                                          <div class="green">
+                                            تمت الموافقة 
+                                          </div>
+                                      </td>
+                                      <td class="pt-39">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                          <path id="Vector"
+                            d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
+                            fill="#454545" />
+                        </svg>
+
+                                      </td>
+                                  </tr>
+
+                                 
+                                  </tbody>
+                                                        
+                              </table>
+
+                              <div class="pagination d-flex justify-content-center">
+                                <a href="#" class="pagination-num active">1</a>
+                                <a href="#" class="pagination-num">2</a>
+                                <a href="#" class="pagination-num">3</a>
+                              </div>
+                          </div>
+                      </div>
+                    <!-- End All Applications #tab1-->
 
 
-                                <tr>
-                                    <th scope="row">
-                                        <label class="control control--checkbox px-1">
-                        <input type="checkbox" />
-                        <div class="control__indicator"><span></span></div>
-                      </label>
-                                    </th>
-                                    <td>
-                                        ١٢٣٤٥٦٥
-                                    </td>
-                                    <td>٧ سبتمبر ٢٠٢١</td>
-                                    <td>
-                                        منى عبدالله حسين
-                                    </td>
-                                    <td>١١،٥٠٠ جنيه</td>
-                                    <td>فرع البنك</td>
-                                    <td> 
-                                      <div class="orange">
-                                          قيد الدراسه  
+                    <!--New Application #tab2-->
+                      <div class="tab-pane fade" id="New-application" role="tabpanel" aria-labelledby="New-application-tab">
+                         <div class="main">
+     
+                          <div class="final-page" style=" display: none;background-color: #DF2024; height: 80vh;">
+                      
+                          
+                            <div class="page-content d-flex flex-column justify-content-center align-items-center">
+                              <i class="fas fa-check-circle" style="font-size: 62px; color: #fff;"></i>
+                              <p class="p-1">تم استلام طلبك بنجاح</p>
+                              <p class="p-2">جاري مراجعة و تقييم الطلب</p>
+                              <!--<button class="back-to-main">العودة للصفحة الرئيسية</button>-->
+                            </div>
+                          </div>
+                          <div class="img"></div>
+                          
+                          <div class="container parent-container">
+                            <div class="section-content">
+                              <div class="row">
+                                
+                                <div class="col-md-10 content p-0">
+                                  <!-- Start Steper-Web -->
+                                  <div class="progress-line mt-0">
+                                    <div class="step">
+                                      <div class="bullet active">
+                                        <span>١</span>
                                       </div>
-                                    </td>
-                                    <td class="pt-39">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
-                                        <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
-                                      </svg>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                  <th scope="row">
-                                      <label class="control control--checkbox px-1">
-                      <input type="checkbox" />
-                      <div class="control__indicator"><span></span></div>
-                    </label>
-                                  </th>
-                                  <td>
-                                      ١٢٣٤٥٦٥
-                                  </td>
-                                  <td>٧ سبتمبر ٢٠٢١</td>
-                                  <td>
-                                      منى عبدالله حسين
-                                  </td>
-                                  <td>١١،٥٠٠ جنيه</td>
-                                  <td>
-                                    <div class="dark-red" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                      تعيين  
-                                   </div>
-                                  </td>
-                                  <td>
-                                      <div class="red">
-                                         مرفوض  
-                                      </div>
-                                   </td>
-                                  <td class="pt-39">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
-                      <path id="Vector"
-                        d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
-                        fill="#454545" />
-                    </svg>
-
-                                  </td>
-                              </tr>
-
-                              <tr>
-                                <th scope="row">
-                                    <label class="control control--checkbox px-1">
-                    <input type="checkbox" />
-                    <div class="control__indicator"><span></span></div>
-                  </label>
-                                </th>
-                                <td>
-                                    ١٢٣٤٥٦٥
-                                </td>
-                                <td>٧ سبتمبر ٢٠٢١</td>
-                                <td>
-                                    منى عبدالله حسين
-                                </td>
-                                <td>١١،٥٠٠ جنيه</td>
-                                <td>فرع البنك</td>
-                                <td>
-                                    <div class="green">
-                                       تمت الموافقة 
                                     </div>
-                                 </td>
-                                <td class="pt-39">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
-                    <path id="Vector"
-                      d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
-                      fill="#454545" />
-                  </svg>
+                                    <div class="step">
+                                      <div class="bullet">
+                                        <span>٢</span>
+                                      </div>
+                                    </div>
+                                    <div class="step">
+                                      <div class="bullet">
+                                        <span>٣</span>
+                                      </div>
+                                    </div>
+                                    <div class="step">
+                                      <div class="bullet">
+                                        <span>٤</span>
+                                      </div>
+                                    </div>
+                                    <div class="step">
+                                      <div class="bullet">
+                                        <span>٥</span>
+                                      </div>
+                                    </div>
+                                    <div class="step">
+                                      <div class="bullet">
+                                        <span>٦</span>
+                                      </div>
+                                    </div>
+                                    <div class="step">
+                                      <div class="bullet">
+                                        <span>٧</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- End Steper-Web -->
+                                  <!-- Start Steper-Mobile -->
+                                  <div class="row justify-space-around">
+                                    <div class="col-5">
+                                      <div class="progress-line-mobile">
+                                        <div class="step">
+                                          <div class="bullet">
+                                            <span><i class="fas fa-info"></i></span>
+                                          </div>
+                                        </div>
+                                        <div class="step">
+                                          <div class="bullet active">
+                                            <span class="counter-step-mobile"></span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="col-6 d-flex d-sm-none justify-content-end mb-2">
+                                      <img src="img/Group 92.svg" alt="" width="55%">
+                                    </div>
+                                  </div>
+                                  
+                                  
+                                  <!-- End Steper-Mobile -->
+                                  <!-- Start Sidebar Mobile -->
+                                  <div class="col-12 sidebar-phone sidebar-phone-1">
+                                    <div class="sidebar-header">
+                                      طلب الحصول على قرض
+                                      بنك ناصر الاجتماعي           
+                                    </div>
+                                    <div class="text-pg-1">لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه
+                                       ... بروشور او فلاير على سبيل المثال
+                                       ... او نماذج مواقع انترنت ...</div>
+                                  </div>
+                      
+                                  <div class="col-12 sidebar-phone sidebar-phone-1">
+                                    <div class="sidebar-header">
+                                      إضافة أشخاص آخرين الى طلب القرض       
+                                    </div>
+                                    <div class="text-pg-1">لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه
+                                       ... بروشور او فلاير على سبيل المثال
+                                       ... او نماذج مواقع انترنت ...</div>
+                                  </div>
+                      
+                                  <div class="col-12 sidebar-phone sidebar-phone-1">
+                                    <div class="sidebar-header">
+                                      حساب قيمة القرض       
+                                    </div>
+                                    <div class="debt-1 d-flex justify-content-around">
+                                      <span class="debt-text">قيمة القسط</span>
+                                      <span class="debt-price">١٠٠٠ جنية</span> 
+                                    </div>
+                                  </div>
+                                  <div class="col-12 sidebar-phone-2">
+                                    <div class="sidebar-header">
+                                       حساب قيمة القرض         
+                                    </div>
+                                    <div class="debt-1">
+                                      <span class="debt-text">قيمة القسط</span>
+                                      <span class="debt-price">٠ جنية</span> 
+                                    </div>
+                                    <div class="debt-2">
+                                      <div class="part-1">
+                                        <span class="debt-text">قيمة القرض</span>
+                                        <span class="debt-price">٠ جنية</span>
+                                      </div>
+                                      <!-- <div class="part-2">
+                                        <span class="debt-text">سعر الفائدة</span>
+                                        <span class="debt-price">2%</span> 
+                                      </div> -->
+                                      <div class="part-2">
+                                        <span class="debt-text">عدد الاقساط</span>
+                                        <span class="debt-price">١٢</span> 
+                                      </div>
+                                    </div>
+                                  </div>
+                      
+                                  <div class="col-12 sidebar-phone sidebar-phone-1">
+                                    <div class="sidebar-header">
+                                      سداد رسوم الطلب         
+                                    </div>
+                                    <div class="text-pg-1">لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه
+                                       ... بروشور او فلاير على سبيل المثال
+                                       ... او نماذج مواقع انترنت ...</div>
+                                  </div>
+                                  <div class="col-12 sidebar-phone sidebar-phone-1">
+                                    <div class="sidebar-header">
+                                      استكمال بيانات الطلب      
+                                    </div>
+                                    <div class="text-pg-1">لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه
+                                      ... بروشور او فلاير على سبيل المثال
+                                      ... او نماذج مواقع انترنت ...</div>
+                                  </div>
+                      
+                                  <div class="col-12 sidebar-phone sidebar-phone-1">
+                                    <div class="slidUP sidebar-guarantor current">
+                                      <div class="sidebar-header">
+                                        اختيار طريقة ضمان القرض          
+                                      </div>
+                                      <div class="text-pg-1">
+                                        لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه
+                                         ... بروشور او فلاير على سبيل المثال
+                                         ... او نماذج مواقع انترنت ...
+                                      </div>
+                                    </div>
+                                    <div class="slidUP sidebar-upload-file">
+                                      <div class="sidebar-header">
+                                        إدراج المستندات الخاصة بالقرض          
+                                      </div>
+                                      <div class="text-pg-1">
+                                        لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه
+                                         ... بروشور او فلاير على سبيل المثال
+                                         ... او نماذج مواقع انترنت ...
+                                      </div>
+                                  </div>
+                                    <!-- <div class="sidebar-header">
+                                      استكمال بيانات الطلب          
+                                    </div>
+                                    <div class="text-pg-1">لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه
+                                       ... بروشور او فلاير على سبيل المثال
+                                       ... او نماذج مواقع انترنت ...
+                                    </div> -->
+                                  </div>
+                                  <div class="col-12 sidebar-phone sidebar-phone-1">
+                                    <div class="sidebar-header">
+                                      مراجعة بيانات الطلب           
+                                    </div>
+                                    <div class="text-pg-1">لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه
+                                       ... بروشور او فلاير على سبيل المثال
+                                       ... او نماذج مواقع انترنت ...</div>
+                                  </div>
+                                  <!-- End Sidebar Mobile -->
+                                  <form>
+                                    <!-- Start Fisrt-Page -->
+                                    <div class="page page-1 active"> 
+                                      <div class="page-form">
+                                        <div class="form-group row">
+                                          <label for="" class="col-md-4 col-12 field-name"> الاسم الثلاثي</label>
+                                          <div class="col-md-8 col-12">
+                                            <input type="text" class="form-control input-name" 
+                                            id="staticEmail" onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'الاسم الثلاثي'" placeholder="الاسم الثلاثي">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row mt-5">
+                                          <label for="" class="col-md-4 col-12 field-id">الرقم القومي</label>
+                                          <div class="col-md-8 col-12">
+                                            <input type="number" class="form-control input-id" id="inputPassword" 
+                                            onfocus="this.placeholder = ''" min="0"
+                                            onblur="this.placeholder = 'الرقم القومي'" placeholder="الرقم القومي">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row mt-5">
+                                          <div class="col-md-5 col-12">
+                                            <select name="" class="select-place wide">
+                                              <option value="" disabled selected>المحافظة</option>
+                                              <option value="1" >أسيوط</option>
+                                              <option value="2">الاسكندرية</option>
+                                            </select>
+                                                        
+                                          </div>
+                                          <div class="col-md-7 col-12">
+                                            <select id="select" class="select-bank wide">
+                                              <option disabled selected>فرع بنك ناصر</option>
+                                              <option value="1">أسيوط</option>
+                                              <option value="2">الأسكندرية</option>
+                                              <option value="3">الجيزة</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="row mt-4">
+                                        <div class="col-md-4 offset-md-5 offset-lg-7 btns">
+                                          <button class="next-button m-auto" type="button">
+                                            <span class="text-button">متابعة</span>
+                                            <span class="icon-button">
+                                              <i class="fas fa-chevron-circle-left"></i>
+                                            </span>
+                                          </button>
+                                        </div>
+                                      </div> 
+                                    </div>
+                                    <!-- End Fisrt-Page -->
+                                    <!-- Start Second-Page -->
+                                    <div class="page page-2"> 
+                                      <div class="page-form active">
+                                          <p class="question-txt">هل ترغب في إضافة أشخاص آخرين الى طلب القرض؟</p>
+                                        <div class="row mt-5">
+                                            <div class="col-md-6 col-6 text-center">
+                                              <button class="yes" type="button">نعم</button>
+                                            </div>
+                                            <div class="col-md-6 col-6 text-center">
+                                              <button class="no" type="button">لا</button>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="page-form secondPage" id="page2">
+                                        <div class="form-group row">
+                                          <label for="" class="d-none d-sm-flex col-md-6 col-6 field-name text-center"> 
+                                            الاسم الثلاثي
+                                          </label>
+                                          <label for="" class="d-none d-sm-flex col-md-6 col-6 field-name text-center">
+                                            الرقم القومي 
+                                          </label>
+                                        </div>
+                                        <div class="inputs-row d-none d-sm-block">
+                                            <div class="form-group newRow row mt-3">
+                                              <div class="d-none d-sm-flex col-sm-1 text-center align-self-center">
+                                                <div class="count">
+                                                  <span>١</span>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-5">
+                                                <input type="text" class="form-control input-name" 
+                                                id="staticEmail" onfocus="this.placeholder = ''"
+                                                onblur="this.placeholder = 'الاسم الثلاثي'" placeholder="الاسم الثلاثي">
+                                              </div>
+                                              <div class="col-md-5">
+                                                <input type="number" class="form-control input-name" 
+                                                id="staticEmail" onfocus="this.placeholder = ''" min="0"
+                                                onblur="this.placeholder = 'الرقم القومي'" placeholder="الرقم القومي">
+                                              </div>
+                                              <div class="col-md-1 col-1 text-center align-self-center delete-button">
+                                                <span class="btn-delete">
+                                                  <i class="fas fa-times fa-delete"></i>
+                                                </span>
+                                              </div>
+                                            </div> 
+                                        </div>
+                                        <div class="inputs-row-mobile d-sm-none">
+                                          <div class="form-group newRow row mt-3">
+                                            <div class="col-12 text-center d-flex justify-content-end delete-button">
+                                              <span class="btn-delete">
+                                                <i class="fas fa-times fa-delete"></i>
+                                              </span>
+                                            </div>
+                                            <div class="col-md-5">
+                                              <input type="text" class="form-control input-name" 
+                                              id="staticEmail" onfocus="this.placeholder = ''"
+                                              onblur="this.placeholder = 'الاسم الثلاثي'" placeholder="الاسم الثلاثي">
+                                            </div>
+                                            <div class="col-md-5 col-12">
+                                              <input type="number" class="form-control input-name" 
+                                              id="staticEmail" onfocus="this.placeholder = ''" min="0"
+                                              onblur="this.placeholder = 'الرقم القومي'" placeholder="الرقم القومي">
+                                            </div> 
+                                          </div> 
+                                        </div>
+                                        <div class="row mt-3">
+                                          <div class="col-md-5">
+                                            <hr class="line">
+                                          </div>
+                                        </div>
+                                        <div class="row mt-3 addDiv">
+                                          <div class="col-md-4">
+                                            <span class="add-icon">+</span>
+                                            <span class="add-text">اضافة</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="row mt-4 hidden-buttons-inFirst" 
+                                      style="justify-content: space-around;display: none;">
+                                        <div class="col-md-4 col-6 btns">
+                                          <button class="prev-button" type="button">
+                                            <span class="icon-button">
+                                              <i class="fas fa-chevron-circle-right"></i>
+                                            </span>
+                                            <span class="text-button">رجوع</span> 
+                                          </button>
+                                        </div>
+                                        <div class="col-md-4 col-6 btns">
+                                          <button class="next-button" type="button">
+                                            <span class="text-button">متابعة</span>
+                                            <span class="icon-button">
+                                              <i class="fas fa-chevron-circle-left"></i>
+                                            </span>
+                                          </button>
+                                        </div>
+                                      </div>   
+                                    </div>
+                      
+                                    <!-- End second-Page -->
+                                    <!-- Start Third-Page -->
+                                    <div class="page page-3">
+                                      <div class="page-form">
+                                        <div class="form-group row">
+                                          <label for="" class="col-md-4 col-12 field-name"> نوع القرض</label>
+                                          <div class="col-md-8 col-12">
+                                            <select id="select" class="select-bank wide">
+                                              <option value="1"> قرض تجاري</option>
+                                              <option value="2">قرض صناعي</option>
+                                              <option value="3">قرض زراعي</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row mt-5">
+                                          <label for="" class="col-md-3 col-12 field-name">مبلغ القرض </label>
+                                          <div class="col-md-6 col-12 align-self-center">
+                                            <div class="js-ag-range-slider">
+                                              <div class="js-ag-range-slider_fill"></div>
+                                              <div class="js-ag-range-slider_bg"></div>
+                                              <input class="js-ag-range-slider_range" type="range" 
+                                              value="1" min="0" step="10" max="100">
+                                            </div>
+                        
+                                          </div>
+                                          <div class="col-md-3 mt-3 col-12">
+                                            <input type="text" class="form-control input-name" 
+                                            id="price" onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = '١٠٠٠'" placeholder="١٠٠٠">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row mt-5">
+                                          <label for="" class="col-md-3 col-12 field-name"> مدة السداد </label>
+                                          <div class="col-md-3 mt-2 col-6">
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="year" id="one-year">
+                                              <label class="form-check-label" for="flexRadioDefault1">
+                                                سنة
+                                              </label>
+                                            </div>
+                                            </div>
+                                            <div class="col-md-3 mt-2 col-6">
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="year" id="two-year">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                  سنتين
+                                                </label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="row mt-5" style="justify-content: space-around;">
+                                        <div class="col-md-4 col-6 btns">
+                                          <button class="prev-button" type="button">
+                                            <span class="icon-button">
+                                              <i class="fas fa-chevron-circle-right"></i>
+                                            </span>
+                                            <span class="text-button">رجوع</span> 
+                                          </button>
+                                        </div>
+                                        <div class="col-md-4 col-6 btns">
+                                          <button class="next-button" type="button">
+                                            <span class="text-button">متابعة</span>
+                                            <span class="icon-button">
+                                              <i class="fas fa-chevron-circle-left"></i>
+                                            </span>
+                                          </button>
+                                        </div>
+                                      </div>   
+                                    </div>
+                                    <!-- End Third-Page -->
+                                    <!-- Start Fourth-Page -->
+                                  <div class="page page-4">
+                                    <div class="page-form">
+                                      <h2 class="form-header">الدفع النقدي</h2>
+                                      <div class="form-group mt-4 row payment">
+                                        <label for="" class="col-md-4 col-12 field-name">ادخل رقم ايصال الدفع</label>
+                                        <div class="col-md-8 col-12">
+                                          <input type="number" class="form-control input-name" placeholder="٢٧٨٥٦٤١٢٠٨٣٣١٣"
+                                          id="staticEmail" onfocus="this.placeholder = ''"
+                                          onblur="this.placeholder = '٢٧٨٥٦٤١٢٠٨٣٣١٣'" placeholder="" min="0" 
+                                          max="9999" pattern=".{0,15}">
+                                        </div>
+                                      </div>
+                                      <!-- <div class="row mt-4">
+                                        <div class="span-with-border">
+                                          <span style="color: #b68b25;font-weight: bold;">او</span>
+                                        </div>
+                                      </div>
+                                      <div class="form-group row" style="margin-top: 2rem; margin-bottom: 2rem;">
+                                        <label for="" class="col-md-8 col-12 field-name">الدفع عن طريق خالص</label>
+                                        <div class="col-md-4 col-12">
+                                          <img src="img/Image 1.png" style="cursor: pointer;margin-top: 20px;" width="150" height="150">
+                                        </div>
+                                      </div> -->
+                                    </div>
+                                    <div class="row mt-5" style="justify-content: space-around;">
+                                      <div class="col-md-4 col-6 btns">
+                                        <button class="prev-button" type="button">
+                                          <span class="icon-button">
+                                            <i class="fas fa-chevron-circle-right"></i>
+                                          </span>
+                                          <span class="text-button">رجوع</span> 
+                                        </button>
+                                      </div>
+                                      <div class="col-md-4 col-6 btns">
+                                        <button class="next-button" type="button">
+                                          <span class="text-button">متابعة</span>
+                                          <span class="icon-button">
+                                            <i class="fas fa-chevron-circle-left"></i>
+                                          </span>
+                                        </button>
+                                      </div>
+                                    </div>   
+                                  </div>
+                                  <!-- End Fourth-Page -->
+                                  
+                                  <!-- Start Fifth-Page -->
+                                  <div class="page page-5">
+                                    <div class="form-1">
+                                      <div class="page-form ">
+                                        <div class="form-group row">
+                                          <label for="" class="col-md-4 col-12 field-name">تليفون محمول</label>
+                                          <div class="col-md-8 col-12">
+                                            <input type="number" class="form-control input-name" 
+                                            id="staticEmail" onfocus="this.placeholder = ''" min="0"
+                                            onblur="this.placeholder = '01234567891'" placeholder="01234567891">
+                                          </div>
+                                        </div> 
+                                        <div class="form-group row mt-5">
+                                          <label for="" class="col-md-4 col-12 field-name">تليفون أرضي</label>
+                                          <div class="col-md-8 col-12">
+                                            <input type="number" class="form-control input-name" 
+                                            id="staticEmail" onfocus="this.placeholder = ''" min="0"
+                                            onblur="this.placeholder = '1234678'" placeholder="12345678">
+                                          </div>
+                                        </div> 
+                                        <div class="form-group row mt-5">
+                                          <label for="" class="col-md-4 col-12 field-name">تاريخ الميلاد</label>
+                                          <div class="col-md-2 col-12">
+                                            <select class="selectDay select-bank wide">  
+                                            </select>
+                                          </div>
+                                          <div class="col-md-3 col-12">
+                                            <select id="select" class="selectMonth select-bank wide">   
+                                            </select>
+                                          </div>
+                                          <div class="col-md-3 col-12">
+                                            <select id="select" class="selectYear select-bank wide"> 
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row mt-5">
+                                          <label for="" class="col-md-4 col-12 field-name">الرقم التاميني</label>
+                                          <div class="col-md-8 col-12">
+                                            <input type="number" class="form-control input-name" 
+                                            id="staticEmail" onfocus="this.placeholder = ''" min="0"
+                                            onblur="this.placeholder = 'الرقم التاميني'" placeholder="الرقم التاميني">
+                                          </div>
+                                        </div>  
+                                        <div class="form-group row mt-5">
+                                          <label for="" class="col-md-4 col-12 field-name">الحالة الاجتماعية</label>
+                                          <div class="col-md-2 col-6 mt-3">
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="choice">
+                                              <label class="form-check-label" for="flexRadioDefault1">
+                                                متزوجة
+                                              </label>
+                                            </div>
+                                            </div>
+                                            <div class="col-md-2 col-6 mt-3">
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="choice">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                  مطلقة
+                                                </label>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-2 col-6 mt-3">
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="choice">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                  ارملة
+                                                </label>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-2 col-6 mt-3">
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="choice">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                  عزباء
+                                                </label>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row mt-5">
+                                          <label for="" class="col-md-4 col-12 field-name">عدد الاطفال</label>
+                                          <div class="col-md-8 col-12">
+                                            <input type="number" class="form-control input-name" 
+                                            id="staticEmail" onfocus="this.placeholder = ''" min="0"
+                                            onblur="this.placeholder = ''" placeholder="">
+                                          </div>
+                                        </div>  
+                                        <div class="form-group row mt-5">
+                                          <label for="" class="col-md-8 col-12 field-name">
+                                            هل لديك اطفال من ذوي الاحتياجات الخاصة
+                                          </label>
+                                          <div class="col-md-2 col-6 mt-3">
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="children">
+                                              <label class="form-check-label" for="flexRadioDefault1">
+                                                نعم
+                                              </label>
+                                            </div>
+                                            </div>
+                                            <div class="col-md-2 col-6 mt-3">
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="children">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                  لا
+                                                </label>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row mt-5">
+                                          <label class="col-md-4 col-12 field-name">عنوان مقدم الطلب<span>
+                                            <small>
+                                              (طبقا للرقم القومي)
+                                            </small>
+                                          </span></label>
+                                          <div class="col-md-8 col-12">
+                                            <input type="number" class="form-control input-name" 
+                                            id="staticEmail" onfocus="this.placeholder = ''" min="0"
+                                            onblur="this.placeholder = 'الرقم التاميني'" placeholder="الرقم التاميني">
+                                          </div>
+                                        </div> 
+                                        <div class="form-group row mt-3">
+                                          <div class="col-md-4"></div>
+                                          <div class="col-md-4 col-12">
+                                            <select id="select" class="select-bank wide">
+                                              <option value="" disabled>المحافظة</option>
+                                              <option value="1" selected>الجيزة</option>
+                                              <option value="2">الجيزة</option>
+                                            </select>
+                                          </div>
+                                          <div class="col-md-4 col-12">
+                                            <select id="select" class="select-bank wide">
+                                              <option value="" disabled>المدينة/ المركز</option>
+                                              <option value="1" selected>الجيزة</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row mt-5">
+                                            <label class="col-md-4 col-12 field-name">عنوان مقدم الطلب<span>
+                                              <small>
+                                                (العنوان الفعلي)
+                                              </small>
+                                            </span></label>
+                                          </label>
+                                          <div class="col-md-4 mt-3">
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="address" 
+                                              id="">
+                                              <label class="form-check-label" for="flexRadioDefault1">
+                                                نفس العنوان
+                                              </label>
+                                            </div>
+                                            </div>
+                                            <div class="col-md-4 mt-3">
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="radio" 
+                                                name="address" id="another-address-btn">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                  عنوان اخر
+                                                </label>
+                                              </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="another-address-content">
+                                          <div class="form-group row">
+                                            <label class="col-md-4 col-12 field-name"></label>
+                                            <div class="col-md-8 col-12">
+                                              <input type="text" class="form-control input-name" 
+                                              id="staticEmail" onfocus="this.placeholder = ''"
+                                              onblur="this.placeholder = '5 شارع النصر'" 
+                                              placeholder="5 شارع النصر">
+                                            </div>
+                                          </div> 
+                                          <div class="form-group row mt-3">
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-4 col-12">
+                                              <select id="select" class="select-bank wide">
+                                                <option value="">المحافظة</option>
+                                                <option value="1">الجيزة</option>
+                                              </select>
+                                            </div>
+                                            <div class="col-md-4 col-12">
+                                              <select id="select" class="select-bank wide">
+                                                <option value="">المدينة/ المركز</option>  
+                                              </select>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="row mt-5" style="justify-content: space-around;">
+                                        <div class="col-md-4 col-6 btns">
+                                          <button class="prev-button" type="button">
+                                            <span class="icon-button">
+                                              <i class="fas fa-chevron-circle-right"></i>
+                                            </span>
+                                            <span class="text-button">رجوع</span> 
+                                          </button>
+                                        </div>
+                                        <div class="col-md-4 col-6 btns">
+                                          <button class="switch-part-2" type="button">
+                                            <span class="text-button">متابعة</span>
+                                            <span class="icon-button">
+                                              <i class="fas fa-chevron-circle-left"></i>
+                                            </span>
+                                          </button>
+                                        </div>
+                                      </div>   
+                                    </div>
+                                    
+                                    <div class="form-2">
+                                      <div class="page-form">
+                                        <div class="form-group row">
+                                          <label for="" class="col-md-4 col-12 field-name">وصف المشروع</label>
+                                          <div class="col-md-8 col-12">
+                                            <textarea class="form-control project-description" cols="" rows="8"></textarea>
+                                          </div>
+                                        </div>  
+                                        <div class="form-group row mt-5">
+                                          <label for="" class="col-md-4 col-12 field-name">
+                                            هل لديكة سابق خبرة
+                                          </label>
+                                          <div class="col-md-2 col-6 mt-3">
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="experience" 
+                                              id="">
+                                              <label class="form-check-label" for="flexRadioDefault1">
+                                                لا
+                                              </label>
+                                            </div>
+                                            </div>
+                                            <div class="col-md-2 col-6 mt-3">
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="experience" 
+                                                id="radio-experience">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                  نعم
+                                                </label>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-4 input-year" style="display: none;">
+                                                <input class="form-control input-name" type="number"
+                                                onfocus="this.placeholder = ''" min="0"
+                                                onblur="this.placeholder = 'عدد السنوات'" 
+                                                placeholder="عدد السنوات">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row mt-5">
+                                          <label for="" class="col-md-4 col-12 field-name">
+                                            مقر المشروع
+                                          </label>
+                                          <div class="col-md-2 col-6 mt-3">
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="place">
+                                              <label class="form-check-label" for="flexRadioDefault1">
+                                                تمليك
+                                              </label>
+                                            </div>
+                                            </div>
+                                            <div class="col-md-2 col-6 mt-3">
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="place">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                  ايجار
+                                                </label>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row mt-5">
+                                          <label class="col-md-4 col-12 field-name">عنوان مقر المشروع</label>
+                                          <div class="col-md-8 col-12">
+                                            <input type="text" class="form-control input-name" 
+                                            id="staticEmail" onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'عنوان مقر المشروع'" 
+                                            placeholder="عنوان مقر المشروع">
+                                          </div>
+                                        </div> 
+                                        <div class="form-group row mt-3">
+                                          <div class="col-md-4"></div>
+                                          <div class="col-md-4 col-12">
+                                            <select id="select" class="select-bank wide">
+                                              <option value="" disabled>المحافظة</option>
+                                              <option value="1" selected>الجيزة</option>
+                                              <option value="2">الجيزة</option>
+                                              <option value="3">الجيزة</option>
+                                            </select>
+                                          </div>
+                                          <div class="col-md-4 col-12">
+                                            <select id="select" class="select-bank wide">
+                                              <option value="" disabled>المدينة/المركز</option> 
+                                              <option value="1" selected>الجيزة</option>
+                                              <option value="2">الجيزة</option> 
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="row mt-5" style="justify-content: space-around;">
+                                        <div class="col-md-4 col-6 btns">
+                                          <button class="prev-form-1" type="button">
+                                            <span class="icon-button">
+                                              <i class="fas fa-chevron-circle-right"></i>
+                                            </span>
+                                            <span class="text-button">رجوع</span> 
+                                          </button>
+                                        </div>
+                                        <div class="col-md-4 col-6 btns">
+                                          <button class="next-button" type="button">
+                                            <span class="text-button">متابعة</span>
+                                            <span class="icon-button">
+                                              <i class="fas fa-chevron-circle-left"></i>
+                                            </span>
+                                          </button>
+                                        </div>
+                                      </div>  
+                                    </div>
+                                  </div>
+                                  <!-- End Fifth-Page -->
+                                  <!-- Start Sixth-Page -->
+                                  <div class="page page-6">
+                                    <div class="guarantor-form">
+                                      <div class="page-form">
+                                        <div class="form-group row">
+                                          <label class="col-md-4 col-12 field-name">نوع الضامن</label>
+                                        </div> 
+                                        <div class="form-group row mt-4">
+                                          <div class="col-md-4 col-12">
+                                            <div class="form-check">
+                                              <input class="form-check-input personal-radio" type="radio" 
+                                              name="guarantor" >
+                                              <label class="form-check-label" for="flexRadioDefault1">
+                                                شخصي
+                                              </label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-4 col-12">
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" name="guarantor">
+                                              <label class="form-check-label" for="flexRadioDefault1">
+                                                تحويل مرتب
+                                              </label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-4 col-12">
+                                            <div class="form-check">
+                                              <input class="form-check-input organization-radio" type="radio" 
+                                              name="guarantor">
+                                              <label class="form-check-label" for="flexRadioDefault1">
+                                                مؤسسة اهلية
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                          <div class="col-12">
+                                            <hr class="page-6-line">
+                                          </div>
+                                        </div>
+                                        <div class="form-group dynamic-form row">
+                                          <div class="personal-form row">
+                                            <label class="col-md-6 d-none d-sm-block field-name">
+                                              الاسم الثلاثي
+                                            </label>
+                                            <label class="col-md-6 d-none d-sm-block field-name">
+                                              الرقم القومي 
+                                            </label>
+                                            <div class="col-md-6 mt-3 col-12">
+                                                <input type="text" class="form-control input-name" 
+                                                id="staticEmail" onfocus="this.placeholder = ''"
+                                                onblur="this.placeholder = 'الاسم الثلاثي'" placeholder="الاسم الثلاثي">
+                                            </div>
+                                            <div class="col-md-6 mt-3 col-12">
+                                                <input type="number" class="form-control input-name" 
+                                                id="staticEmail" onfocus="this.placeholder = ''" min="0"
+                                                onblur="this.placeholder = 'الرقم القومي'" placeholder="الرقم القومي">
+                                            </div>
+                                          </div>
+                                          <div class="organization-form row">
+                                            <label class="col-md-6 d-none d-sm-block field-name">
+                                              أسم المنشأة
+                                            </label>
+                                            <label class="col-md-6 d-none d-sm-block field-name">
+                                              رقم التسجيل
+                                            </label>
+                                            <div class="col-md-6 mt-3 col-12">
+                                                <input type="text" class="form-control input-name" 
+                                                id="staticEmail" onfocus="this.placeholder = ''"
+                                                onblur="this.placeholder = 'أسم المنشأة'" placeholder="أسم المنشأة">
+                                            </div>
+                                            <div class="col-md-6 mt-3 col-12">
+                                                <input type="number" class="form-control input-name" 
+                                                id="staticEmail" onfocus="this.placeholder = ''" min="0"
+                                                onblur="this.placeholder = 'رقم التسجيل'" placeholder="رقم التسجيل">
+                                            </div>
+                                          </div>
+                                        </div> 
+                                      </div>
+                                      <div class="row mt-5" style="justify-content: space-around;">
+                                        <div class="col-md-4 col-6 btns">
+                                          <button class="prev-button" type="button">
+                                            <span class="icon-button">
+                                              <i class="fas fa-chevron-circle-right"></i>
+                                            </span>
+                                            <span class="text-button">رجوع</span> 
+                                          </button>
+                                        </div>
+                                        <div class="col-md-4 col-6 btns">
+                                          <button class="switch-to-uploadForm" type="button">
+                                            <span class="text-button">متابعة</span>
+                                            <span class="icon-button">
+                                              <i class="fas fa-chevron-circle-left"></i>
+                                            </span>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>                 
+                                    <div class="upload-form">
+                                      <div class="page-form">
+                                        <div class="form-group row">
+                                          <div class="col-md-8 col-12">
+                                            <i class="fas fa-file fa-2x"></i>
+                                            <label for="" class="field-name">
+                                              صورة بطاقة الرقم القومي
+                                            </label>
+                                          </div>
+                                          <div class="col-md-3 choose-file col-10">
+                                            <input type="file" id="file-1" accept="image/*" class="input-file d-none">
+                                            <label for="file-1" class="upload-btn text-truncate"> 
+                                              اختار الملفات  
+                                            </label>  
+                                          </div>
+                                        </div>
+                                        <div class="form-group row mt-5">
+                                          <div class="col-md-8 col-12">
+                                            <i class="fas fa-file fa-2x"></i>
+                                            <label for="" class="field-name">
+                                              إيصال مرافق خاص بمحل الإقامة
+                                            </label>
+                                          </div>
+                                          <div class="col-md-3 choose-file col-10">
+                                            <input type="file" id="file-2" accept="image/*" class="input-file d-none">
+                                            <label for="file-2" class="upload-btn text-truncate">اختار الملفات</label>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row mt-5">
+                                          <div class="col-md-8 col-12">
+                                            <i class="fas fa-file fa-2x"></i>
+                                            <label for="" class="field-name">
+                                              عقد إيجار/تمليك مقر المشروع
+                                            </label>
+                                          </div>
+                                          <div class="col-md-3 choose-file col-10">
+                                            <input type="file" id="file-3" accept="image/*" class="input-file d-none">
+                                            <label for="file-3" class="upload-btn text-truncate">اختار الملفات</label>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row mt-5">
+                                          <div class="col-md-8 col-12">
+                                            <i class="fas fa-file fa-2x"></i>
+                                            <label for="" class="field-name">
+                                              عرض/عروض اسعار مستلزمات المشروع
+                                            </label>
+                                          </div>
+                                          <div class="col-md-3 choose-file col-10">
+                                            <input type="file" id="file-4" accept="image/*" class="input-file d-none">
+                                            <label for="file-4" class="upload-btn text-truncate">اختار الملفات</label>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row mt-5">
+                                          <div class="col-md-8 col-12">
+                                            <i class="fas fa-file fa-2x"></i>
+                                            <label for="" class="field-name">
+                                              مستند ضمان القرض (خطاب المؤسسة)
+                                            </label>
+                                          </div>
+                                          <div class="col-md-3 choose-file col-10">
+                                            <input type="file" id="file-5" accept="image/*" class="input-file d-none">
+                                            <label for="file-5" class="upload-btn text-truncate">اختار الملفات</label>
+                                          </div>
+                                        </div>
+                                      </div> 
+                                      <div class="row mt-5" style="justify-content: space-around;">
+                                        <div class="col-md-4 col-6 btns">
+                                          <button class="prev-guarantor-form" type="button">
+                                            <span class="icon-button">
+                                              <i class="fas fa-chevron-circle-right"></i>
+                                            </span>
+                                            <span class="text-button">رجوع</span> 
+                                          </button>
+                                        </div>
+                                        <div class="col-md-4 col-6 btns">
+                                          <button class="next-button" type="button">
+                                            <span class="text-button">متابعة</span>
+                                            <span class="icon-button">
+                                              <i class="fas fa-chevron-circle-left"></i>
+                                            </span>
+                                          </button>
+                                        </div>
+                                      </div>  
+                                    </div>     
+                                  </div>
+                                  <!-- End Sixth-Page -->
+                                  <!-- Start Seventh-Page -->
+                                  <div class="page page-7">
+                                    <div class="page-form">
+                                      <h4>البيانات الشخصية</h4>
+                                      <div class="row mt-3">
+                                        <label class="col-md-4 col-12 field-name fw-bold">
+                                          الاسم الثلاثي
+                                        </label>
+                                        <div class="col-md-8 col-12 field-name">
+                                          منى عبدالله حسين
+                                        </div>
+                                      </div>
+                                      <div class="row mt-4">
+                                        <label class="col-md-4 col-12 field-name fw-bold">
+                                          الرقم القومي
+                                        </label>
+                                        <div class="col-md-8 col-12 field-name">
+                                          ٢٧٨٥٦٤١٢٠٨٣٣١٣
+                                        </div>
+                                      </div>
+                                      <div class="row mt-4">
+                                        <label class="col-md-4 col-12 field-name fw-bold">
+                                          عنوان مقدم الطلب 
+                                          <small>(طبقاً للرقم القومي)</small>
+                                        </label>
+                                        <div class="col-md-8 col-12 field-name">
+                                          منى عبدالله حسين
+                                          <div class="row">
+                                            <div class="d-none d-md-flex col-md-3"></div>
+                                            <small class="col-4 col-md-4">المحافظة</small>
+                                            <small class="col-8 col-md-4">المدينة / المركز</small>
+                                          </div>
+                                          
+                                        </div>
+                                      </div>
+                                      <div class="row mt-4">
+                                        <label class="col-md-4 col-12 field-name fw-bold">
+                                          عنوان مقدم الطلب 
+                                          <small>(العنوان الفعلي)</small>
+                                        </label>
+                                        <div class="col-md-8 col-12 field-name">
+                                          منى عبدالله حسين
+                                          <div class="row">
+                                            <div class="d-none d-md-flex col-md-3"></div>
+                                            <small class="col-4 col-md-4">المحافظة</small>
+                                            <small class="col-8 col-md-4">المدينة / المركز</small>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="row mt-4">
+                                        <label class="col-md-4 col-12 field-name fw-bold">
+                                          فرع بنك ناصر الاجتماعي
+                                        </label>
+                                        <div class="col-md-8 col-12 field-name">
+                                          مركز أبو النمرس
+                                        </div>
+                                      </div>
+                                      <div class="row mt-5">
+                                        <hr class="page-7-line">
+                                      </div>
+                                      <h4 class="mt-4">تفاصيل القرض</h4>
+                                      <div class="row mt-4">
+                                        <label class="col-md-4 col-12 field-name fw-bold">
+                                          وصف المشروع
+                                        </label>
+                                        <div class="col-md-8 col-12 field-name">
+                                          ورشة تفصيل ملابس
+                                        </div>
+                                      </div>
+                                      <div class="row mt-4">
+                                        <label class="col-md-4 col-12 field-name fw-bold">
+                                          قيمة القرض
+                                        </label>
+                                        <div class="col-md-8 col-12 field-name">
+                                          تجاري
+                                        </div>
+                                      </div>
+                                      <div class="row mt-4">
+                                        <label class="col-md-4 col-12 field-name fw-bold">
+                                          قيمة القرض                    
+                                        </label>
+                                        <div class="col-md-8 col-12 field-name fw-bold">
+                                          ٥٠٠٠ جنية 
+                                        </div>
+                                      </div>
+                                      <div class="row mt-4">
+                                        <label class="col-md-4 col-12 field-name fw-bold">
+                                          مدة السداد
+                                        </label>
+                                        <div class="col-md-8 col-12 field-name fw-bold">
+                                          ١ سنة
+                                        </div>
+                                      </div>
+                                      <div class="row mt-4">
+                                        <label class="col-md-4 col-12 field-name fw-bold">
+                                          قيمة القسط
+                                        </label>
+                                        <div class="col-md-8 col-12 field-name fw-bold">
+                                          ٢٣٠ جنية
+                                        </div>
+                                      </div>
+                                      <div class="row mt-5">
+                                        <hr class="page-7-line">
+                                      </div>
+                                      <h4 class="mt-4">ضمان القرض</h4>
+                                      <div class="row mt-4">
+                                        <label class="col-md-4 col-12 field-name fw-bold">
+                                          نوع الضامن
+                                        </label>
+                                        <div class="col-md-8 col-12 field-name">
+                                          مؤسسة أهلية
+                                        </div>
+                                      </div>
+                                      <div class="row mt-4">
+                                        <label class="col-md-4 col-12 field-name fw-bold">
+                                          أسم المنشأة
+                                        </label>
+                                        <div class="col-md-8 col-12 field-name">
+                                          مصر الخير
+                                        </div>
+                                      </div>
+                                      <div class="row mt-4">
+                                        <label class="col-md-4 col-12 field-name fw-bold">
+                                          رقم التسجيل                    
+                                        </label>
+                                        <div class="col-md-8 col-12 field-name">
+                                          ٢٧٨٥٦٤١٢٠٨٣٣١٣
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="row mt-5" style="justify-content: space-around;">
+                                      <div class="col-md-4 col-6 btns">
+                                        <button class="prev-button" type="button">
+                                          <span class="icon-button">
+                                            <i class="fas fa-chevron-circle-right"></i>
+                                          </span>
+                                          <span class="text-button">رجوع</span> 
+                                        </button>
+                                      </div>
+                                      <div class="col-md-4 col-6 btns">
+                                        <button class="order" type="button">
+                                          <span class="text-button">تقديم الطلب</span>
+                                          <span class="icon-button">
+                                            <i class="fas fa-chevron-circle-left"></i>
+                                          </span>
+                                        </button>
+                                      </div>
+                                    </div>  
+                                  </div>
+                                  <!-- End Seventh-Page -->
+                                  </form>
+                                 
+                                </div>
+                              </div>
+                              </div>
+                            </div>
+                         </div> 
+                      </div>
+                    <!-- End New Application #tab2-->
 
-                                </td>
-                            </tr>
 
-                           
-                            </tbody>
-                                                   
-                        </table>
+                    <!-- Complete Application # Tab3-->
+                      <div class="tab-pane fade" id="complete-application" role="tabpanel" aria-labelledby="complete-application-tab">
+                          <div class="row mb-5">
+                            <div class="col-sm-4">
+                                <!--<input class="search"  placeholder="بحث">
+                                <svg id="Research" xmlns="http://www.w3.org/2000/svg" width="26.503" height="26.602" viewBox="0 0 26.503 26.602">
+                                  <path id="Vector" d="M25.3,19.712l-2.76-2.827a4.107,4.107,0,0,0-4.533-.76l-1.2-1.2a9.333,9.333,0,1,0-1.88,1.88l1.187,1.187a4,4,0,0,0,.707,4.613l2.827,2.827a4.021,4.021,0,1,0,5.653-5.72ZM13.992,14.059a6.667,6.667,0,1,1,1.45-2.165,6.667,6.667,0,0,1-1.45,2.165Zm9.427,9.427a1.333,1.333,0,0,1-1.893,0L18.7,20.659a1.339,1.339,0,1,1,1.893-1.893l2.827,2.827a1.333,1.333,0,0,1,0,1.893Z" transform="translate(0 0)" fill="#df2024"/>
+                                </svg>-->
 
-                        <div class="pagination d-flex justify-content-center">
-                          <a href="#" class="pagination-num active">1</a>
-                          <a href="#" class="pagination-num">2</a>
-                          <a href="#" class="pagination-num">3</a>
-                        </div>
-                    </div>
+
+                                <div class="input-group mb-3 search">
+                                  <button class="btn btn-outline-secondary btn-icon" type="button" id="button-addon2"><svg id="Research" xmlns="http://www.w3.org/2000/svg" width="26.503" height="26.602" viewBox="0 0 26.503 26.602">
+                                    <path id="Vector" d="M25.3,19.712l-2.76-2.827a4.107,4.107,0,0,0-4.533-.76l-1.2-1.2a9.333,9.333,0,1,0-1.88,1.88l1.187,1.187a4,4,0,0,0,.707,4.613l2.827,2.827a4.021,4.021,0,1,0,5.653-5.72ZM13.992,14.059a6.667,6.667,0,1,1,1.45-2.165,6.667,6.667,0,0,1-1.45,2.165Zm9.427,9.427a1.333,1.333,0,0,1-1.893,0L18.7,20.659a1.339,1.339,0,1,1,1.893-1.893l2.827,2.827a1.333,1.333,0,0,1,0,1.893Z" transform="translate(0 0)" fill="#df2024"/>
+                                  </svg></button>
+                                  <input type="text" class="form-control " placeholder="بحث" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                  
+                                </div>
+                            </div>
+              
+                            <div class="col-sm-4 d-flex justify-content-center">
+                                <a class="search-btn">بحث</a>
+                            </div>
+              
+                            <div class="col-sm-4">
+                                <div class="num-order">
+                                  <span>١٤</span> طلب جديد
+                                </div>
+                            </div>
+                          </div>
+
+                            <div class="table-responsive">
+                                <table class="table custom-table">
+                                  
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">
+                                                <label class="control control--checkbox px-1">
+                                                  <input type="checkbox" class="js-check-all" />
+                                                  <div class="control__indicator"><span></span></div>
+                                                </label>
+                                            </th>
+                                            <th scope="col">رقم الطلب</th>
+                                            <th scope="col">التاريخ</th>
+                                            <th scope="col">الاسم</th>
+                                            <th scope="col">قيمة القرض</th>
+                                            <th scope="col">الشريك</th>
+                                            <th scope="col">حالة الطلب</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">
+                                                <label class="control control--checkbox px-1">
+                                <input type="checkbox" />
+                                <div class="control__indicator"><span></span></div>
+                              </label>
+                                            </th>
+                                            <td>
+                                                ١٢٣٤٥٦٥
+                                            </td>
+                                            <td>٧ سبتمبر ٢٠٢١</td>
+                                            <td>
+                                                منى عبدالله حسين
+                                            </td>
+                                            <td>١١،٥٠٠ جنيه</td>
+                                            <td>فرع البنك</td>
+                                            <td>
+                                                <div class="green">
+                                                  تمت الموافقة 
+                                                </div>
+                                            </td>
+                                            <td class="pt-39">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                                <path id="Vector"
+                                  d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
+                                  fill="#454545" />
+                              </svg>
+
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <th scope="row">
+                                                <label class="control control--checkbox px-1">
+                                <input type="checkbox" />
+                                <div class="control__indicator"><span></span></div>
+                              </label>
+                                            </th>
+                                            <td>
+                                                ١٢٣٤٥٦٥
+                                            </td>
+                                            <td>٧ سبتمبر ٢٠٢١</td>
+                                            <td>
+                                                منى عبدالله حسين
+                                            </td>
+                                            <td>١١،٥٠٠ جنيه</td>
+                                            <td>فرع البنك</td>
+                                            <td> 
+                                              <div class="orange">
+                                                  قيد الدراسه  
+                                              </div>
+                                            </td>
+                                            <td class="pt-39">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                                                <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
+                                              </svg>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                          <th scope="row">
+                                              <label class="control control--checkbox px-1">
+                              <input type="checkbox" />
+                              <div class="control__indicator"><span></span></div>
+                            </label>
+                                          </th>
+                                          <td>
+                                              ١٢٣٤٥٦٥
+                                          </td>
+                                          <td>٧ سبتمبر ٢٠٢١</td>
+                                          <td>
+                                              منى عبدالله حسين
+                                          </td>
+                                          <td>١١،٥٠٠ جنيه</td>
+                                          <td>
+                                            <div class="dark-red" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                              تعيين  
+                                          </div>
+                                          </td>
+                                          <td>
+                                              <div class="red">
+                                                مرفوض  
+                                              </div>
+                                          </td>
+                                          <td class="pt-39">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                              <path id="Vector"
+                                d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
+                                fill="#454545" />
+                            </svg>
+
+                                          </td>
+                                      </tr>
+
+                                      <tr>
+                                        <th scope="row">
+                                            <label class="control control--checkbox px-1">
+                            <input type="checkbox" />
+                            <div class="control__indicator"><span></span></div>
+                          </label>
+                                        </th>
+                                        <td>
+                                            ١٢٣٤٥٦٥
+                                        </td>
+                                        <td>٧ سبتمبر ٢٠٢١</td>
+                                        <td>
+                                            منى عبدالله حسين
+                                        </td>
+                                        <td>١١،٥٠٠ جنيه</td>
+                                        <td>فرع البنك</td>
+                                        <td>
+                                            <div class="green">
+                                              تمت الموافقة 
+                                            </div>
+                                        </td>
+                                        <td class="pt-39">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                            <path id="Vector"
+                              d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
+                              fill="#454545" />
+                          </svg>
+
+                                        </td>
+                                    </tr>
+
+                                  
+                                    </tbody>
+                                                          
+                                </table>
+
+                                <div class="pagination d-flex justify-content-center">
+                                  <a href="#" class="pagination-num active">1</a>
+                                  <a href="#" class="pagination-num">2</a>
+                                  <a href="#" class="pagination-num">3</a>
+                                </div>
+                            </div>
+                      </div>
+
+                    <!-- End Complete Application # Tab3-->
+                  </div>
                 </div>
+
+
             </div>
-
-
-
         </div>
     </section>
 
@@ -428,5 +1760,7 @@
         })
     </script>
     <script src="js/main.js"></script>
+    <script src="js/main-forms.js"></script>
+    <script src="js/switchPages-forms.js"></script>
 </body>
 </html
