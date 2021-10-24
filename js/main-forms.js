@@ -1,4 +1,5 @@
 const pages = Array.from(document.querySelectorAll(".page"));
+//const sidebar = Array.from(document.querySelectorAll(".sidebar-content"));
 const nextBtn = document.querySelectorAll(".next-button");
 const prevBtn = document.querySelectorAll(".prev-button");
 const bullets = document.querySelectorAll(".step .bullet");
@@ -132,7 +133,7 @@ $(document).ready(function(){
         pages[index].classList.remove("active");
         //sidebar[index].classList.remove("active");
         pages[index + 1].classList.add("active");
-        //sidebar[index + 1].classList.add("active");
+       // sidebar[3].classList.add("active");
         bullets[currentBullet + 1].classList.add("active");
         index++;
         if(index == 2){

@@ -141,6 +141,29 @@ nav .new p {
 nav .sec:hover {
   background-color: #BFBFBF;
 }
+nav .dropdown .dropdown-toggle {
+  padding-bottom: 20px;
+}
+nav .dropdown .dropdown-toggle:focus {
+  box-shadow: none;
+}
+nav .dropdown .dropdown-toggle::after {
+  vertical-align: -1px !important;
+}
+nav ul.dropdown-menu.show {
+  border-radius: 10px !important;
+}
+nav .dropdown-menu[data-bs-popper] {
+  top: 75% !important;
+}
+nav .dropdown-menu[data-bs-popper] .fa-power-off {
+  margin: 0 5px;
+  font-size: 14px;
+  color: #DF2024;
+}
+nav .dropdown-menu[data-bs-popper] a {
+  color: #212529;
+}
 
 .num-order {
   width: 100%;
@@ -249,39 +272,139 @@ nav .sec:hover {
 }
 
 .green {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 90%;
   padding: 5px 0;
-  font-family: "Cairo";
-  font-weight: 600;
-  font-size: 18px;
-  color: #2ed67b;
   text-align: center;
   border-radius: 10px;
   background: rgba(46, 214, 163, 0.1);
+  color: #2ed67b;
+  font-family: "Cairo";
+  font-weight: 600;
+  font-size: 17px;
+  /*select{
+
+          color: $green-color;
+          font-family: 'Cairo';
+          font-weight: 600;
+          font-size: 17px;
+  }*/
+  /*.nice-select{
+      background-color: transparent !important;
+      border: none !important;
+      &::after{
+          display: none;
+      }
+      span.current{
+              color: $green-color;
+              font-family: 'Cairo';
+              font-weight: 600;
+              font-size: 17px;
+      }
+
+      ul.list{
+          left: -22px;
+          border: 1px solid rgb(167, 165, 165);
+          border-radius: 9px;
+          width: 150px;
+          li{
+              text-align: right;
+          }
+      }
+  }*/
 }
 
 .orange {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 90%;
   padding: 5px 0;
-  font-family: "Cairo";
-  font-weight: 600;
-  font-size: 18px;
-  color: #fd844b;
   text-align: center;
   border-radius: 10px;
   background: rgba(255, 132, 75, 0.1);
+  color: #fd844b;
+  font-family: "Cairo";
+  font-weight: 600;
+  font-size: 17px;
+  /*select{
+      color: $orange-color;
+      font-family: 'Cairo';
+      font-weight: 600;
+      font-size: 17px;
+  }*/
+  /*.nice-select{
+      background-color: transparent !important;
+      border: none !important;
+      &::after{
+          display: none;
+      }
+      span.current{
+              color: $orange-color;
+              font-family: 'Cairo';
+              font-weight: 600;
+              font-size: 17px;
+      }
+
+      ul.list{
+          left: -22px;
+          border: 1px solid rgb(167, 165, 165);
+          border-radius: 9px;
+          width: 150px;
+          li{
+              text-align: right;
+          }
+      }
+  }*/
 }
 
 .red {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 90%;
   padding: 5px 0;
-  font-family: "Cairo";
-  font-weight: 600;
-  font-size: 18px;
-  color: #df2024;
   text-align: center;
   border-radius: 10px;
   background: rgba(255, 96, 107, 0.1);
+  color: #DF2024;
+  font-family: "Cairo";
+  font-weight: 600;
+  font-size: 17px;
+  /*select{
+      color: $mainCol;
+      font-family: 'Cairo';
+      font-weight: 600;
+      font-size: 17px;
+  }*/
+  /*.nice-select{
+      background-color: transparent !important;
+      border: none !important;
+      &::after{
+          display: none;
+      }
+      span.current{
+              color: $mainCol;
+              font-family: 'Cairo';
+              font-weight: 600;
+              font-size: 17px;
+      }
+
+      ul.list{
+          left: -22px;
+          border: 1px solid rgb(167, 165, 165);
+          border-radius: 9px;
+          width: 150px;
+          li{
+              text-align: right;
+          }
+      }
+  }*/
 }
 
 .dark-red {
@@ -300,7 +423,7 @@ nav .sec:hover {
 }
 
 .pt-39 {
-  padding-top: 39px !important;
+  padding-top: 30px !important;
 }
 
 .modal.show {
@@ -336,6 +459,9 @@ nav .sec:hover {
 }
 .modal.show .modal-body .nice-select ul.list {
   width: 100%;
+}
+.modal.show .modal-body .nice-select ul.list li {
+  text-align: right;
 }
 .modal.show .modal-body .notes {
   padding-right: 10px;
@@ -411,6 +537,196 @@ ul.nav-tabs li {
 }
 ul.nav-tabs li a {
   width: 100%;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+td .dropdown-toggle:focus {
+  box-shadow: none;
+}
+td .dropdown-toggle::after {
+  display: none !important;
+}
+td ul.dropdown-menu.show {
+  transform: translate(7px, 23px) !important;
+}
+td ul.dropdown-menu.show a .fas {
+  margin-left: 10px;
+}
+
+/*************** delete Alert *******************/
+.modal-confirm {
+  color: #636363;
+  width: 400px;
+}
+
+.modal-confirm .modal-content {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+}
+
+.modal-confirm .modal-header {
+  border-bottom: none;
+  position: relative;
+}
+
+.modal-confirm h4 {
+  text-align: center;
+  font-size: 26px;
+  margin: 30px 0 -10px;
+}
+
+.modal-confirm .close {
+  position: absolute;
+  top: -5px;
+  right: -2px;
+}
+
+.modal-confirm .modal-body {
+  color: #999;
+}
+
+.modal-confirm .modal-footer {
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 10px 15px 25px;
+}
+
+.modal-confirm .modal-footer a {
+  color: #999;
+}
+
+.modal-confirm .icon-box {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+  z-index: 9;
+  text-align: center;
+  border: 3px solid #DF2024;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-confirm .icon-box i {
+  color: #DF2024;
+  font-size: 46px;
+  display: inline-block;
+  margin: 0;
+}
+
+.modal-confirm .btn, .modal-confirm .btn:active {
+  color: #fff;
+  border-radius: 4px;
+  background: #60c7c1;
+  text-decoration: none;
+  transition: all 0.4s;
+  line-height: normal;
+  min-width: 120px;
+  border: none;
+  min-height: 40px;
+  border-radius: 3px;
+  margin: 0 5px;
+}
+
+.modal-confirm .btn-secondary {
+  background: #c1c1c1;
+}
+
+.modal-confirm .btn-secondary:hover, .modal-confirm .btn-secondary:focus {
+  background: #a8a8a8;
+}
+
+.modal-confirm .btn-danger {
+  background: #ee3535;
+}
+
+.modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
+  background: #DF2024;
+}
+
+.trigger-btn {
+  display: inline-block;
+  margin: 100px auto;
+}
+
+thead th {
+  padding-bottom: 7px !important;
+}
+
+tbody .order-num {
+  padding-right: 30px;
+}
+tbody .control--checkbox {
+  margin-left: 3px;
+}
+
+.dataTables_wrapper .row:nth-child(1), .dataTables_wrapper .row:nth-child(3) {
+  display: none;
+}
+
+.approave-btn {
+  width: 40%;
+  padding: 10px;
+  background: #7A7A7A;
+  text-align: center;
+  border-radius: 16px;
+  font-family: "Tajawal";
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 15px;
+  border: none;
+  outline: none;
+}
+.approave-btn:disabled {
+  opacity: 0.5;
+}
+
+/*table.dataTable>thead .sorting:after, table.dataTable>thead .sorting_asc:after{
+    right: 1.5em !important;
+}
+
+table.dataTable>thead .sorting:before, table.dataTable>thead .sorting_asc:before{
+    right: 2em !important;
+}*/
+.nav-tabs li button.active {
+  background: #6c6c6c !important;
+  color: white !important;
+  border-radius: 13px !important;
+}
+.nav-tabs li button.active:hover {
+  background: #6c6c6c !important;
+  color: white !important;
+  border: none !important;
+}
+
+.nav-tabs li button {
+  border: none !important;
+  width: 100%;
+  background: #DF2024 !important;
+  font-family: "Tajawal";
+  font-weight: 500;
+  font-size: 20px;
+  text-align: right;
+  color: #fff;
+  margin-top: 15px;
+  height: 44px;
+  border-radius: 13px !important;
+  border: 1px solid #ededed;
+}
+.nav-tabs li button:hover {
+  border: 1px solid #DF2024 !important;
+  background: transparent !important;
+  color: #DF2024;
 }
 
 .search {
@@ -490,24 +806,6 @@ ul.nav-tabs li a {
   text-align: right;
   color: #fff;
   margin-bottom: 4%;
-}
-.sidebar .red-color {
-  background: #DF2024;
-  transition: 0.5s;
-}
-.sidebar .red-color:hover {
-  background: transparent;
-  border: 1px solid #DF2024;
-  color: #DF2024;
-}
-.sidebar .gray-color {
-  background: #6c6c6c;
-  transition: 0.5s;
-}
-.sidebar .gray-color:hover {
-  background: transparent;
-  border: 1px solid #6c6c6c;
-  color: #6c6c6c;
 }
 .sidebar .seprator {
   border-bottom: 1px solid #DF2024;

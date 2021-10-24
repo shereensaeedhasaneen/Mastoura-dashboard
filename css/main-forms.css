@@ -234,12 +234,12 @@ nav button.navbar-toggler:focus {
 .main .section-content .sidebar-phone.active {
   display: block;
 }
-.main .section-content .sidebar-content, .main .section-content .sidebar-content.sidebar-2 {
+/*.main .section-content .sidebar-content, .main .section-content .sidebar-content.sidebar-2 {
   display: none;
-}
-.main .section-content .sidebar-content.sidebar-1, .main .section-content .sidebar-content.sidebar-2 {
+}*/
+/*.main .section-content .sidebar-content.sidebar-1, .main .section-content .sidebar-content.sidebar-2 {
   padding: 25px 0;
-}
+}*/
 @media (max-width: 767px) {
   .main .section-content .sidebar-content.sidebar-1, .main .section-content .sidebar-content.sidebar-2 {
     display: none !important;
@@ -249,7 +249,7 @@ nav button.navbar-toggler:focus {
   /*font-family: "Tajawal Black";*/
   font-weight: normal;
   font-size: 28px;
-  margin-top: 3rem;
+  /*margin-top: 3rem;*/
   text-align: center;
   color: #454545;
   margin-bottom: 1rem;
@@ -264,9 +264,9 @@ nav button.navbar-toggler:focus {
 .main .section-content .sidebar-content.sidebar-1 .sidebar-upload-file, .main .section-content .sidebar-content.sidebar-2 .sidebar-upload-file {
   display: none;
 }
-.main .section-content .sidebar-content.sidebar-2 {
+/*.main .section-content .sidebar-content.sidebar-2 {
   padding: 22px 18px;
-}
+}*/
 .main .section-content .sidebar-content.sidebar-2 .debt-price {
   font-weight: 700;
   font-size: 25px;
@@ -693,6 +693,7 @@ nav button.navbar-toggler:focus {
 }
 .main .section-content .content .page.page-3 .page-form #price {
   font-size: 28px;
+  text-align: center;
 }
 .main .section-content .content .page.page-3 .slider {
   -webkit-appearance: none;

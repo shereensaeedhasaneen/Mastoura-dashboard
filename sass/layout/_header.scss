@@ -172,6 +172,33 @@ nav{
       .sec:hover{
         background-color: #BFBFBF;
       }
+
+      .dropdown
+          .dropdown-toggle
+          {
+            padding-bottom: 20px;
+            &:focus{
+              box-shadow: none;
+            }
+            &::after{
+              vertical-align: -1px !important;
+            }
+          }
+
+          ul.dropdown-menu.show{
+            border-radius: 10px !important;
+          }
+          .dropdown-menu[data-bs-popper] {
+            top: 75% !important;
+            .fa-power-off{
+              margin: 0 5px;
+              font-size: 14px;
+              color: $mainCol;
+            }
+            a{
+              color: #212529;
+            }
+          }
 }
 
   

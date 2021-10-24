@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/main-forms.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css">
+
     <!--fontAwesome-->
     <script src="https://kit.fontawesome.com/2e646d6873.js" crossorigin="anonymous"></script>
 
@@ -108,7 +110,7 @@
                     </g>
                   </svg>-->
 
-                  <div class="notification">
+                  <!--<div class="notification" >
                     <a href="#">
                     </a><div class="notBtn" href="#"><a href="#">
                       <div class="number">2</div>
@@ -116,13 +118,13 @@
                         </a>
                         <div class="box">
                           </a><div class="display"><a href="#">
-                            <!--when Notification is empty-->
+                            <!##when Notification is empty##>
                                 <div class="nothing"> 
                                   <i class="fas fa-child stick" aria-hidden="true"></i> 
                                   <div class="cent">Looks Like your all caught up!</div>
                                 </div>
                             </a>
-                             <!--when Notification contain items-->
+                             <!##when Notification contain items##>
                                 <div class="cont">    
                                   <div class="sec new">
                                     <p>Notification 1</p>
@@ -148,9 +150,17 @@
                        </div>
                     </div>
                       
-                  </div>
+                  </div>-->
 
-                <p>  مني حسين</p>
+                <!--<p>  مني حسين</p>-->
+                <div class="dropdown">
+                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    مني حسين
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#"> <i class="fas fa-power-off"></i> خروج</a></li>
+                  </ul>
+                </div>
                 <div class="user-photo"></div>
             </div>
         </div>
@@ -158,7 +168,7 @@
 
     <section class="pt-5 pb-5" style="background: url(img/Group\ 52.png) #F7F7F7 no-repeat; background-size: cover; background-position: center;">
         <!--Popup-->
-<!-- Modal -->
+<!--Approave Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -166,7 +176,7 @@
           <div class="modal-body">
             <div class="row">
               <div class="col-12 mb-4">
-                <select name="" id="">
+                <select name="" id="modal-niceSelect" class="modal-niceSelect">
                   <option selected value="1">اختار الشريك</option>
                   <option value="2">test</option>
                   <option value="3">test</option>
@@ -199,6 +209,32 @@
       </div>
     </div>
     <!-- end popup-->
+
+    <!--Delete Alert -->
+
+    <div id="CloseModal" class="modal fade">
+      <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+          <div class="modal-header flex-column">
+            <div class="icon-box">
+              <i class="fas fa-times"></i>
+            </div>						
+            <h4 class="modal-title w-100">هل أنت متأكد؟</h4>	
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-bs-hidden="true" style="border: none; background: none;color:#DF2024;font-size: 25px;margin-right: 20px;">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p>هل تريد حقًا حذف هذه السجلات؟ لا يمكن التراجع عن هذه العملية .</p>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-danger">حذف</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">الغاء</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>     
+    <!-- End Delete Alert-->
+
         <div class="container-fauld">
             
             <div class="row">
@@ -207,14 +243,14 @@
                   <div class="sidebar">
                     
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
-                      <li class="nav-item active" role="presentation">
-                        <a href="#" class="gray-color" id="All-applications-tab"  data-bs-toggle="tab" data-bs-target="#All-applications" type="button" role="tab" aria-controls="All-applications" aria-selected="true">طلبات القروض </a>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="All-applications-tab" data-bs-toggle="tab" data-bs-target="#All-applications" type="button" role="tab" aria-controls="All-applications" aria-selected="true">طلبات القروض</button>
                       </li>
                       <li class="nav-item" role="presentation">
-                        <a href="#" class="red-color"  id="New-application-tab" data-bs-toggle="tab" data-bs-target="#New-application" type="button" role="tab" aria-controls="New-application" aria-selected="false"> بدء طلب جديد </a>
+                        <button class="nav-link" id="New-application-tab" data-bs-toggle="tab" data-bs-target="#New-application" type="button" role="tab" aria-controls="New-application" aria-selected="false">بدء طلب جديد </button>
                       </li>
                       <li class="nav-item" role="presentation">
-                        <a href="#" class="red-color"  id="complete-application-tab" data-bs-toggle="tab" data-bs-target="#complete-application" type="button" role="tab" aria-controls="complete-application" aria-selected="false"> استكمال طلب </a>
+                        <button class="nav-link" id="complete-application-tab" data-bs-toggle="tab" data-bs-target="#complete-application" type="button" role="tab" aria-controls="complete-application" aria-selected="false">استكمال طلب</button>
                       </li>
                     </ul>
 
@@ -231,8 +267,10 @@
                     
                 </div>
               <!--End Right Side -->
+
+              <!-- Left Side -->
                 <div class="col-9">
-                  <div class="tab-content" id="myTabContent">
+                  <div class="tab-content" id="buttonsTabContent">
                     <!--All Applications #tab1-->
                     <div class="tab-pane fade show active" id="All-applications" role="tabpanel" aria-labelledby="All-applications-tab">
                         <div class="row mb-2">
@@ -264,17 +302,19 @@
                         </div>
 
                           <div class="table-responsive">
-                              <table class="table custom-table">
+                              <table class="table custom-table" id="AllApplications">
                                 
                                   <thead>
+                                   
                                       <tr>
-                                          <th scope="col">
+                                          <!--<th scope="col">
                                               <label class="control control--checkbox px-1">
                                                 <input type="checkbox" class="js-check-all" />
                                                 <div class="control__indicator"><span></span></div>
                                               </label>
-                                          </th>
-                                          <th scope="col">رقم الطلب</th>
+                                          </th>-->
+                                          <th scope="col">
+                                            رقم الطلب</th>
                                           <th scope="col">التاريخ</th>
                                           <th scope="col">الاسم</th>
                                           <th scope="col">قيمة القرض</th>
@@ -282,130 +322,169 @@
                                           <th scope="col">حالة الطلب</th>
                                           <th scope="col"></th>
                                       </tr>
+                                  
                                   </thead>
                                   <tbody>
                                       <tr>
-                                          <th scope="row">
+                                          <!--<th scope="row" class="pt-39">
+                                           
                                               <label class="control control--checkbox px-1">
-                              <input type="checkbox" />
-                              <div class="control__indicator"><span></span></div>
-                            </label>
-                                          </th>
-                                          <td>
+                                              <input type="checkbox" />
+                                              <div class="control__indicator"><span></span></div>
+                                              </label>
+                          
+                                          </th>-->
+                                          <td class="clickable pt-39 order-num">
                                               ١٢٣٤٥٦٥
                                           </td>
-                                          <td>٧ سبتمبر ٢٠٢١</td>
-                                          <td>
+                                          <td class="clickable pt-39">٧ سبتمبر 2019</td>
+                                          <td class="clickable pt-39">
                                               منى عبدالله حسين
                                           </td>
-                                          <td>١١،٥٠٠ جنيه</td>
-                                          <td>فرع البنك</td>
+                                          <td class="clickable pt-39">11 جنيه</td>
+                                          <td class="clickable pt-39 approve">فرع البنك</td>
                                           <td>
                                               <div class="green">
-                                                تمت الموافقة 
+                                                تمت الموافقه
+                                                <!--<select name="s1" class="status" id="s1">
+                                                  <option selected>تمت الموافقه</option>
+                                                  <option value="1">قيد الدراسه</option>
+                                                  <option value="2">مرفوض</option>
+                                                </select>-->  
                                               </div>
                                           </td>
                                           <td class="pt-39">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
-                              <path id="Vector"
-                                d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
-                                fill="#454545" />
-                            </svg>
+                                            <div class="dropdown">
+                                              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                                                  <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
+                                                </svg>
+                                              </button>
+                                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                <li><a class="dropdown-item" href="#"> <i class="fas fa-eye"></i> عرض</a></li>
+                                                <li><a class="dropdown-item" href="#"> <i class="fas fa-edit"></i> تعديل</a></li>
+                                                <li><a class="dropdown-item" href="#CloseModal" class="trigger-btn" data-bs-toggle="modal"> <i class="fas fa-trash"></i> حذف</a></li>
+                                              </ul>
+                                            </div>
 
                                           </td>
                                       </tr>
 
 
                                       <tr>
-                                          <th scope="row">
-                                              <label class="control control--checkbox px-1">
-                              <input type="checkbox" />
-                              <div class="control__indicator"><span></span></div>
-                            </label>
-                                          </th>
-                                          <td>
+                                          
+                                          <td class="clickable pt-39 order-num">
                                               ١٢٣٤٥٦٥
                                           </td>
-                                          <td>٧ سبتمبر ٢٠٢١</td>
-                                          <td>
+                                          <td class="clickable pt-39">٧ سبتمبر 2018</td>
+                                          <td class="clickable pt-39">
                                               منى عبدالله حسين
                                           </td>
-                                          <td>١١،٥٠٠ جنيه</td>
-                                          <td>فرع البنك</td>
+                                          <td class="clickable pt-39">١١،٥٠٠ جنيه</td>
+                                          <td class="clickable pt-39 approve">فرع البنك</td>
                                           <td> 
                                             <div class="orange">
-                                                قيد الدراسه  
+                                              قيد الدراسه
+                                              <!--<select name="s2" class="status" id="s2">
+                                                <option selected>قيد الدراسه</option>
+                                                <option value="1">تمت الموافقه</option>
+                                                <option value="2">مرفوض</option>
+                                              </select>--> 
                                             </div>
                                           </td>
                                           <td class="pt-39">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
-                                              <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
-                                            </svg>
+                                           
+                                            <div class="dropdown">
+                                              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                                                  <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
+                                                </svg>
+                                              </button>
+                                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                <li><a class="dropdown-item" href="#"> <i class="fas fa-eye"></i> عرض</a></li>
+                                                <li><a class="dropdown-item" href="#"> <i class="fas fa-edit"></i> تعديل</a></li>
+                                                <li><a class="dropdown-item" href="#CloseModal" class="trigger-btn" data-bs-toggle="modal"> <i class="fas fa-trash"></i> حذف</a></li>
+                                              </ul>
+                                            </div>
                                           </td>
                                       </tr>
 
                                       <tr>
-                                        <th scope="row">
-                                            <label class="control control--checkbox px-1">
-                            <input type="checkbox" />
-                            <div class="control__indicator"><span></span></div>
-                          </label>
-                                        </th>
-                                        <td>
+                                        <td class="clickable pt-39 order-num">
                                             ١٢٣٤٥٦٥
                                         </td>
-                                        <td>٧ سبتمبر ٢٠٢١</td>
-                                        <td>
+                                        <td class="clickable pt-39">٧ سبتمبر 2017</td>
+                                        <td class="clickable pt-39">
                                             منى عبدالله حسين
                                         </td>
-                                        <td>١١،٥٠٠ جنيه</td>
-                                        <td>
+                                        <td class="clickable pt-39">١١،٥٠٠ جنيه</td>
+                                        <td class="clickable approve">
                                           <div class="dark-red" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                             تعيين  
-                                        </div>
+                                          </div>
                                         </td>
                                         <td>
                                             <div class="red">
-                                              مرفوض  
+                                              مرفوض
+                                              <!--<select name="s3" class="status" id="s3">
+                                                <option selected>مرفوض</option>
+                                                <option value="1">تمت الموافقه</option>
+                                                <option value="2">قيد الدراسه</option>
+                                              </select>-->
+
+                                              
                                             </div>
                                         </td>
                                         <td class="pt-39">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
-                            <path id="Vector"
-                              d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
-                              fill="#454545" />
-                          </svg>
+                                          <div class="dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                                                <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
+                                              </svg>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                              <li><a class="dropdown-item" href="#"> <i class="fas fa-eye"></i> عرض</a></li>
+                                              <li><a class="dropdown-item" href="#"> <i class="fas fa-edit"></i> تعديل</a></li>
+                                              <li><a class="dropdown-item" href="#CloseModal" class="trigger-btn" data-bs-toggle="modal"> <i class="fas fa-trash"></i> حذف</a></li>
+                                            </ul>
+                                          </div>
 
                                         </td>
                                     </tr>
 
                                     <tr>
-                                      <th scope="row">
-                                          <label class="control control--checkbox px-1">
-                          <input type="checkbox" />
-                          <div class="control__indicator"><span></span></div>
-                        </label>
-                                      </th>
-                                      <td>
+                                      <td class="clickable pt-39 order-num">
                                           ١٢٣٤٥٦٥
                                       </td>
-                                      <td>٧ سبتمبر ٢٠٢١</td>
-                                      <td>
+                                      <td class="clickable pt-39">٧ سبتمبر ٢٠٢١</td>
+                                      <td class="clickable pt-39">
                                           منى عبدالله حسين
                                       </td>
-                                      <td>١١،٥٠٠ جنيه</td>
-                                      <td>فرع البنك</td>
+                                      <td class="clickable pt-39">١١،٥٠٠ جنيه</td>
+                                      <td class="clickable pt-39 approve">فرع البنك</td>
                                       <td>
                                           <div class="green">
-                                            تمت الموافقة 
+                                            تمت الموافقه
+                                            <!--<select name="s4" class="status" id="s4">
+                                              <option selected>تمت الموافقه</option>
+                                              <option value="1">قيد الدراسه</option>
+                                              <option value="2">مرفوض</option>
+                                            </select>-->  
                                           </div>
                                       </td>
                                       <td class="pt-39">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
-                          <path id="Vector"
-                            d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
-                            fill="#454545" />
-                        </svg>
+                                        <div class="dropdown">
+                                          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                                              <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
+                                            </svg>
+                                          </button>
+                                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#"> <i class="fas fa-eye"></i> عرض</a></li>
+                                            <li><a class="dropdown-item" href="#"> <i class="fas fa-edit"></i> تعديل</a></li>
+                                            <li><a class="dropdown-item" href="#CloseModal" class="trigger-btn" data-bs-toggle="modal"> <i class="fas fa-trash"></i> حذف</a></li>
+                                          </ul>
+                                        </div>
 
                                       </td>
                                   </tr>
@@ -415,7 +494,7 @@
                                                         
                               </table>
 
-                              <div class="pagination d-flex justify-content-center">
+                              <div class="pagination d-flex justify-content-center mt-3">
                                 <a href="#" class="pagination-num active">1</a>
                                 <a href="#" class="pagination-num">2</a>
                                 <a href="#" class="pagination-num">3</a>
@@ -770,52 +849,84 @@
                                     <!-- Start Third-Page -->
                                     <div class="page page-3">
                                       <div class="page-form">
-                                        <div class="form-group row">
-                                          <label for="" class="col-md-4 col-12 field-name"> نوع القرض</label>
-                                          <div class="col-md-8 col-12">
-                                            <select id="select" class="select-bank wide">
-                                              <option value="1"> قرض تجاري</option>
-                                              <option value="2">قرض صناعي</option>
-                                              <option value="3">قرض زراعي</option>
-                                            </select>
-                                          </div>
+                                        <div class="row">
+                                            <div class="col-8">
+                                              <div class="form-group row">
+                                                <label for="" class="col-md-4 col-12 field-name"> نوع القرض</label>
+                                                <div class="col-md-7 col-12">
+                                                  <select id="select" class="select-bank wide">
+                                                    <option value="1"> قرض تجاري</option>
+                                                    <option value="2">قرض صناعي</option>
+                                                    <option value="3">قرض زراعي</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                                              <div class="form-group row mt-5">
+                                                <label for="" class="col-md-4 col-12 field-name">مبلغ القرض </label>
+                                                <!--<div class="col-md-6 col-12 align-self-center">
+                                                  <div class="js-ag-range-slider">
+                                                    <div class="js-ag-range-slider_fill"></div>
+                                                    <div class="js-ag-range-slider_bg"></div>
+                                                    <input class="js-ag-range-slider_range" type="range" 
+                                                    value="1" min="0" step="10" max="100">
+                                                  </div>
+                              
+                                                </div>-->
+                                                <div class="col-md-7 mt-3 col-12">
+                                                  <input type="text" class="form-control input-name" 
+                                                  id="price" onfocus="this.placeholder = ''"
+                                                  onblur="this.placeholder = '١٠٠٠'" placeholder="١٠٠٠">
+                                                </div>
+                                              </div>
+                                              <div class="form-group row mt-5">
+                                                <label for="" class="col-md-3 col-12 field-name"> مدة السداد </label>
+                                                <div class="col-md-2 mt-2 col-6">
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="year" id="one-year">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                      سنة
+                                                    </label>
+                                                  </div>
+                                                  </div>
+                                                  <div class="col-md-2 mt-2 col-6">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input" type="radio" name="year" id="two-year">
+                                                      <label class="form-check-label" for="flexRadioDefault1">
+                                                        سنتين
+                                                      </label>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <div class="col-4">
+                                              <div class="sidebar-content sidebar-2">
+                                                <div class="sidebar-header">
+                                                  حساب قيمة القرض     
+                                                  <!-- <p class="test"></p>  -->
+                                                </div>
+                                                <div class="debt-1">
+                                                  <span class="debt-text">قيمة القسط</span>
+                                                  <span class="debt-price">٠ جنية</span> 
+                                                </div>
+                                                <div class="debt-2">
+                                                  <div class="part-1">
+                                                    <span class="debt-text">قيمة القرض</span>
+                                                    <span class="debt-price">٠ جنية</span>
+                                                  </div>
+                                                  <!-- <div class="part-2">
+                                                    <span class="debt-text">سعر الفائدة</span>
+                                                    <span class="debt-price">2%</span> 
+                                                  </div> -->
+                                                  <div class="part-2">
+                                                    <span class="debt-text">عدد الاقساط</span>
+                                                    <span class="debt-price">١٢</span> 
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
                                         </div>
-                                        <div class="form-group row mt-5">
-                                          <label for="" class="col-md-3 col-12 field-name">مبلغ القرض </label>
-                                          <div class="col-md-6 col-12 align-self-center">
-                                            <div class="js-ag-range-slider">
-                                              <div class="js-ag-range-slider_fill"></div>
-                                              <div class="js-ag-range-slider_bg"></div>
-                                              <input class="js-ag-range-slider_range" type="range" 
-                                              value="1" min="0" step="10" max="100">
-                                            </div>
-                        
-                                          </div>
-                                          <div class="col-md-3 mt-3 col-12">
-                                            <input type="text" class="form-control input-name" 
-                                            id="price" onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = '١٠٠٠'" placeholder="١٠٠٠">
-                                          </div>
-                                        </div>
-                                        <div class="form-group row mt-5">
-                                          <label for="" class="col-md-3 col-12 field-name"> مدة السداد </label>
-                                          <div class="col-md-3 mt-2 col-6">
-                                            <div class="form-check">
-                                              <input class="form-check-input" type="radio" name="year" id="one-year">
-                                              <label class="form-check-label" for="flexRadioDefault1">
-                                                سنة
-                                              </label>
-                                            </div>
-                                            </div>
-                                            <div class="col-md-3 mt-2 col-6">
-                                              <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="year" id="two-year">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                  سنتين
-                                                </label>
-                                            </div>
-                                          </div>
-                                        </div>
+                                          
                                       </div>
                                       <div class="row mt-5" style="justify-content: space-around;">
                                         <div class="col-md-4 col-6 btns">
@@ -1597,30 +1708,36 @@
                                         <tr>
                                             <th scope="row">
                                                 <label class="control control--checkbox px-1">
-                                <input type="checkbox" />
-                                <div class="control__indicator"><span></span></div>
-                              </label>
+                                                <input type="checkbox" />
+                                                <div class="control__indicator"><span></span></div>
+                                              </label>
                                             </th>
-                                            <td>
+                                            <td class="clickable">
                                                 ١٢٣٤٥٦٥
                                             </td>
-                                            <td>٧ سبتمبر ٢٠٢١</td>
-                                            <td>
+                                            <td class="clickable">٧ سبتمبر ٢٠٢١</td>
+                                            <td class="clickable">
                                                 منى عبدالله حسين
                                             </td>
-                                            <td>١١،٥٠٠ جنيه</td>
-                                            <td>فرع البنك</td>
-                                            <td>
+                                            <td class="clickable">١١،٥٠٠ جنيه</td>
+                                            <td class="clickable">فرع البنك</td>
+                                            <td class="clickable">
                                                 <div class="green">
                                                   تمت الموافقة 
                                                 </div>
                                             </td>
                                             <td class="pt-39">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
-                                <path id="Vector"
-                                  d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
-                                  fill="#454545" />
-                              </svg>
+                                              <div class="dropdown">
+                                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                                                    <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
+                                                  </svg>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                  <li><a class="dropdown-item" href="#"> <i class="fas fa-edit"></i> تعديل</a></li>
+                                                  <li><a class="dropdown-item" href="#"> <i class="fas fa-trash"></i> حذف</a></li>
+                                                </ul>
+                                              </div>
 
                                             </td>
                                         </tr>
@@ -1629,62 +1746,76 @@
                                         <tr>
                                             <th scope="row">
                                                 <label class="control control--checkbox px-1">
-                                <input type="checkbox" />
-                                <div class="control__indicator"><span></span></div>
-                              </label>
+                                                <input type="checkbox" />
+                                                <div class="control__indicator"><span></span></div>
+                                              </label>
                                             </th>
-                                            <td>
+                                            <td class="clickable">
                                                 ١٢٣٤٥٦٥
                                             </td>
-                                            <td>٧ سبتمبر ٢٠٢١</td>
-                                            <td>
+                                            <td class="clickable">٧ سبتمبر ٢٠٢١</td>
+                                            <td class="clickable">
                                                 منى عبدالله حسين
                                             </td>
-                                            <td>١١،٥٠٠ جنيه</td>
-                                            <td>فرع البنك</td>
-                                            <td> 
+                                            <td class="clickable">١١،٥٠٠ جنيه</td>
+                                            <td class="clickable">فرع البنك</td>
+                                            <td class="clickable"> 
                                               <div class="orange">
                                                   قيد الدراسه  
                                               </div>
                                             </td>
                                             <td class="pt-39">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
-                                                <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
-                                              </svg>
+                                              <div class="dropdown">
+                                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                                                    <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
+                                                  </svg>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                  <li><a class="dropdown-item" href="#"> <i class="fas fa-edit"></i> تعديل</a></li>
+                                                  <li><a class="dropdown-item" href="#"> <i class="fas fa-trash"></i> حذف</a></li>
+                                                </ul>
+                                              </div>
                                             </td>
                                         </tr>
 
                                         <tr>
                                           <th scope="row">
                                               <label class="control control--checkbox px-1">
-                              <input type="checkbox" />
-                              <div class="control__indicator"><span></span></div>
-                            </label>
+                                              <input type="checkbox" />
+                                              <div class="control__indicator"><span></span></div>
+                                            </label>
                                           </th>
-                                          <td>
+                                          <td class="clickable">
                                               ١٢٣٤٥٦٥
                                           </td>
-                                          <td>٧ سبتمبر ٢٠٢١</td>
-                                          <td>
+                                          <td class="clickable">٧ سبتمبر ٢٠٢١</td>
+                                          <td class="clickable">
                                               منى عبدالله حسين
                                           </td>
-                                          <td>١١،٥٠٠ جنيه</td>
-                                          <td>
+                                          <td class="clickable">١١،٥٠٠ جنيه</td>
+                                          <td class="clickable">
                                             <div class="dark-red" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                               تعيين  
                                           </div>
                                           </td>
-                                          <td>
+                                          <td class="clickable">
                                               <div class="red">
                                                 مرفوض  
                                               </div>
                                           </td>
                                           <td class="pt-39">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
-                              <path id="Vector"
-                                d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
-                                fill="#454545" />
-                            </svg>
+                                            <div class="dropdown">
+                                              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                                                  <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
+                                                </svg>
+                                              </button>
+                                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                <li><a class="dropdown-item" href="#"> <i class="fas fa-edit"></i> تعديل</a></li>
+                                                <li><a class="dropdown-item" href="#"> <i class="fas fa-trash"></i> حذف</a></li>
+                                              </ul>
+                                            </div>
 
                                           </td>
                                       </tr>
@@ -1692,30 +1823,36 @@
                                       <tr>
                                         <th scope="row">
                                             <label class="control control--checkbox px-1">
-                            <input type="checkbox" />
-                            <div class="control__indicator"><span></span></div>
-                          </label>
+                                            <input type="checkbox" />
+                                            <div class="control__indicator"><span></span></div>
+                                          </label>
                                         </th>
-                                        <td>
+                                        <td class="clickable">
                                             ١٢٣٤٥٦٥
                                         </td>
-                                        <td>٧ سبتمبر ٢٠٢١</td>
-                                        <td>
+                                        <td class="clickable">٧ سبتمبر ٢٠٢١</td>
+                                        <td class="clickable">
                                             منى عبدالله حسين
                                         </td>
-                                        <td>١١،٥٠٠ جنيه</td>
-                                        <td>فرع البنك</td>
-                                        <td>
+                                        <td class="clickable">١١،٥٠٠ جنيه</td>
+                                        <td class="clickable">فرع البنك</td>
+                                        <td class="clickable">
                                             <div class="green">
                                               تمت الموافقة 
                                             </div>
                                         </td>
                                         <td class="pt-39">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
-                            <path id="Vector"
-                              d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z"
-                              fill="#454545" />
-                          </svg>
+                                          <div class="dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                                                <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
+                                              </svg>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                              <li><a class="dropdown-item" href="#"> <i class="fas fa-edit"></i> تعديل</a></li>
+                                              <li><a class="dropdown-item" href="#"> <i class="fas fa-trash"></i> حذف</a></li>
+                                            </ul>
+                                          </div>
 
                                         </td>
                                     </tr>
@@ -1736,7 +1873,7 @@
                     <!-- End Complete Application # Tab3-->
                   </div>
                 </div>
-
+              <!-- End Left Side -->
 
             </div>
         </div>
@@ -1762,5 +1899,15 @@
     <script src="js/main.js"></script>
     <script src="js/main-forms.js"></script>
     <script src="js/switchPages-forms.js"></script>
+
+    <!--DataTable-->
+
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#AllApplications').DataTable();
+        } );
+    </script>
 </body>
 </html
