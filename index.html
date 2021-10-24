@@ -1684,161 +1684,56 @@
                             </div>
                           </div>
 
-                            <div class="table-responsive">
-                                <table class="table custom-table">
-                                  
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">
-                                                <label class="control control--checkbox px-1">
-                                                  <input type="checkbox" class="js-check-all" />
-                                                  <div class="control__indicator"><span></span></div>
-                                                </label>
-                                            </th>
-                                            <th scope="col">رقم الطلب</th>
-                                            <th scope="col">التاريخ</th>
-                                            <th scope="col">الاسم</th>
-                                            <th scope="col">قيمة القرض</th>
-                                            <th scope="col">الشريك</th>
-                                            <th scope="col">حالة الطلب</th>
-                                            <th scope="col"></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">
-                                                <label class="control control--checkbox px-1">
-                                                <input type="checkbox" />
-                                                <div class="control__indicator"><span></span></div>
-                                              </label>
-                                            </th>
-                                            <td class="clickable">
-                                                ١٢٣٤٥٦٥
-                                            </td>
-                                            <td class="clickable">٧ سبتمبر ٢٠٢١</td>
-                                            <td class="clickable">
-                                                منى عبدالله حسين
-                                            </td>
-                                            <td class="clickable">١١،٥٠٠ جنيه</td>
-                                            <td class="clickable">فرع البنك</td>
-                                            <td class="clickable">
-                                                <div class="green">
-                                                  تمت الموافقة 
-                                                </div>
-                                            </td>
-                                            <td class="pt-39">
-                                              <div class="dropdown">
-                                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                                  <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
-                                                    <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
-                                                  </svg>
-                                                </button>
-                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                  <li><a class="dropdown-item" href="#"> <i class="fas fa-edit"></i> تعديل</a></li>
-                                                  <li><a class="dropdown-item" href="#"> <i class="fas fa-trash"></i> حذف</a></li>
-                                                </ul>
-                                              </div>
-
-                                            </td>
-                                        </tr>
-
-
-                                        <tr>
-                                            <th scope="row">
-                                                <label class="control control--checkbox px-1">
-                                                <input type="checkbox" />
-                                                <div class="control__indicator"><span></span></div>
-                                              </label>
-                                            </th>
-                                            <td class="clickable">
-                                                ١٢٣٤٥٦٥
-                                            </td>
-                                            <td class="clickable">٧ سبتمبر ٢٠٢١</td>
-                                            <td class="clickable">
-                                                منى عبدالله حسين
-                                            </td>
-                                            <td class="clickable">١١،٥٠٠ جنيه</td>
-                                            <td class="clickable">فرع البنك</td>
-                                            <td class="clickable"> 
-                                              <div class="orange">
-                                                  قيد الدراسه  
-                                              </div>
-                                            </td>
-                                            <td class="pt-39">
-                                              <div class="dropdown">
-                                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                                  <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
-                                                    <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
-                                                  </svg>
-                                                </button>
-                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                  <li><a class="dropdown-item" href="#"> <i class="fas fa-edit"></i> تعديل</a></li>
-                                                  <li><a class="dropdown-item" href="#"> <i class="fas fa-trash"></i> حذف</a></li>
-                                                </ul>
-                                              </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                          <th scope="row">
-                                              <label class="control control--checkbox px-1">
-                                              <input type="checkbox" />
+                          <div class="table-responsive">
+                            <table class="table custom-table" id="AllApplications">
+                              
+                                <thead>
+                                 
+                                    <tr>
+                                        <!--<th scope="col">
+                                            <label class="control control--checkbox px-1">
+                                              <input type="checkbox" class="js-check-all" />
                                               <div class="control__indicator"><span></span></div>
                                             </label>
-                                          </th>
-                                          <td class="clickable">
-                                              ١٢٣٤٥٦٥
-                                          </td>
-                                          <td class="clickable">٧ سبتمبر ٢٠٢١</td>
-                                          <td class="clickable">
-                                              منى عبدالله حسين
-                                          </td>
-                                          <td class="clickable">١١،٥٠٠ جنيه</td>
-                                          <td class="clickable">
-                                            <div class="dark-red" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                              تعيين  
-                                          </div>
-                                          </td>
-                                          <td class="clickable">
-                                              <div class="red">
-                                                مرفوض  
-                                              </div>
-                                          </td>
-                                          <td class="pt-39">
-                                            <div class="dropdown">
-                                              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
-                                                  <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
-                                                </svg>
-                                              </button>
-                                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                <li><a class="dropdown-item" href="#"> <i class="fas fa-edit"></i> تعديل</a></li>
-                                                <li><a class="dropdown-item" href="#"> <i class="fas fa-trash"></i> حذف</a></li>
-                                              </ul>
-                                            </div>
-
-                                          </td>
-                                      </tr>
-
-                                      <tr>
-                                        <th scope="row">
+                                        </th>-->
+                                        <th scope="col">
+                                          رقم الطلب</th>
+                                        <th scope="col">التاريخ</th>
+                                        <th scope="col">الاسم</th>
+                                        <th scope="col">قيمة القرض</th>
+                                        <th scope="col">الشريك</th>
+                                        <th scope="col">حالة الطلب</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <!--<th scope="row" class="pt-39">
+                                         
                                             <label class="control control--checkbox px-1">
                                             <input type="checkbox" />
                                             <div class="control__indicator"><span></span></div>
-                                          </label>
-                                        </th>
-                                        <td class="clickable">
+                                            </label>
+                        
+                                        </th>-->
+                                        <td class="clickable pt-39 order-num">
                                             ١٢٣٤٥٦٥
                                         </td>
-                                        <td class="clickable">٧ سبتمبر ٢٠٢١</td>
-                                        <td class="clickable">
+                                        <td class="clickable pt-39">٧ سبتمبر 2019</td>
+                                        <td class="clickable pt-39">
                                             منى عبدالله حسين
                                         </td>
-                                        <td class="clickable">١١،٥٠٠ جنيه</td>
-                                        <td class="clickable">فرع البنك</td>
-                                        <td class="clickable">
+                                        <td class="clickable pt-39">11 جنيه</td>
+                                        <td class="clickable pt-39 approve">فرع البنك</td>
+                                        <td>
                                             <div class="green">
-                                              تمت الموافقة 
+                                              تمت الموافقه
+                                              <!--<select name="s1" class="status" id="s1">
+                                                <option selected>تمت الموافقه</option>
+                                                <option value="1">قيد الدراسه</option>
+                                                <option value="2">مرفوض</option>
+                                              </select>-->  
                                             </div>
                                         </td>
                                         <td class="pt-39">
@@ -1849,25 +1744,145 @@
                                               </svg>
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                              <li><a class="dropdown-item" href="#"> <i class="fas fa-eye"></i> عرض</a></li>
                                               <li><a class="dropdown-item" href="#"> <i class="fas fa-edit"></i> تعديل</a></li>
-                                              <li><a class="dropdown-item" href="#"> <i class="fas fa-trash"></i> حذف</a></li>
+                                              <li><a class="dropdown-item" href="#CloseModal" class="trigger-btn" data-bs-toggle="modal"> <i class="fas fa-trash"></i> حذف</a></li>
                                             </ul>
                                           </div>
 
                                         </td>
                                     </tr>
 
-                                  
-                                    </tbody>
-                                                          
-                                </table>
 
-                                <div class="pagination d-flex justify-content-center">
-                                  <a href="#" class="pagination-num active">1</a>
-                                  <a href="#" class="pagination-num">2</a>
-                                  <a href="#" class="pagination-num">3</a>
-                                </div>
+                                    <tr>
+                                        
+                                        <td class="clickable pt-39 order-num">
+                                            ١٢٣٤٥٦٥
+                                        </td>
+                                        <td class="clickable pt-39">٧ سبتمبر 2018</td>
+                                        <td class="clickable pt-39">
+                                            منى عبدالله حسين
+                                        </td>
+                                        <td class="clickable pt-39">١١،٥٠٠ جنيه</td>
+                                        <td class="clickable pt-39 approve">فرع البنك</td>
+                                        <td> 
+                                          <div class="orange">
+                                            قيد الدراسه
+                                            <!--<select name="s2" class="status" id="s2">
+                                              <option selected>قيد الدراسه</option>
+                                              <option value="1">تمت الموافقه</option>
+                                              <option value="2">مرفوض</option>
+                                            </select>--> 
+                                          </div>
+                                        </td>
+                                        <td class="pt-39">
+                                         
+                                          <div class="dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                                                <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
+                                              </svg>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                              <li><a class="dropdown-item" href="#"> <i class="fas fa-eye"></i> عرض</a></li>
+                                              <li><a class="dropdown-item" href="#"> <i class="fas fa-edit"></i> تعديل</a></li>
+                                              <li><a class="dropdown-item" href="#CloseModal" class="trigger-btn" data-bs-toggle="modal"> <i class="fas fa-trash"></i> حذف</a></li>
+                                            </ul>
+                                          </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                      <td class="clickable pt-39 order-num">
+                                          ١٢٣٤٥٦٥
+                                      </td>
+                                      <td class="clickable pt-39">٧ سبتمبر 2017</td>
+                                      <td class="clickable pt-39">
+                                          منى عبدالله حسين
+                                      </td>
+                                      <td class="clickable pt-39">١١،٥٠٠ جنيه</td>
+                                      <td class="clickable approve">
+                                        <div class="dark-red" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                          تعيين  
+                                        </div>
+                                      </td>
+                                      <td>
+                                          <div class="red">
+                                            مرفوض
+                                            <!--<select name="s3" class="status" id="s3">
+                                              <option selected>مرفوض</option>
+                                              <option value="1">تمت الموافقه</option>
+                                              <option value="2">قيد الدراسه</option>
+                                            </select>-->
+
+                                            
+                                          </div>
+                                      </td>
+                                      <td class="pt-39">
+                                        <div class="dropdown">
+                                          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                                              <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
+                                            </svg>
+                                          </button>
+                                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#"> <i class="fas fa-eye"></i> عرض</a></li>
+                                            <li><a class="dropdown-item" href="#"> <i class="fas fa-edit"></i> تعديل</a></li>
+                                            <li><a class="dropdown-item" href="#CloseModal" class="trigger-btn" data-bs-toggle="modal"> <i class="fas fa-trash"></i> حذف</a></li>
+                                          </ul>
+                                        </div>
+
+                                      </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td class="clickable pt-39 order-num">
+                                        ١٢٣٤٥٦٥
+                                    </td>
+                                    <td class="clickable pt-39">٧ سبتمبر ٢٠٢١</td>
+                                    <td class="clickable pt-39">
+                                        منى عبدالله حسين
+                                    </td>
+                                    <td class="clickable pt-39">١١،٥٠٠ جنيه</td>
+                                    <td class="clickable pt-39 approve">فرع البنك</td>
+                                    <td>
+                                        <div class="green">
+                                          تمت الموافقه
+                                          <!--<select name="s4" class="status" id="s4">
+                                            <option selected>تمت الموافقه</option>
+                                            <option value="1">قيد الدراسه</option>
+                                            <option value="2">مرفوض</option>
+                                          </select>-->  
+                                        </div>
+                                    </td>
+                                    <td class="pt-39">
+                                      <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="29.442" height="7.043" viewBox="0 0 29.442 7.043">
+                                            <path id="Vector" d="M14.722,0A3.522,3.522,0,1,0,17.21,1.031,3.522,3.522,0,0,0,14.722,0ZM3.522,0A3.522,3.522,0,1,0,6.01,1.031,3.522,3.522,0,0,0,3.522,0Zm22.4,0A3.522,3.522,0,1,0,28.41,1.031,3.522,3.522,0,0,0,25.922,0Z" fill="#454545"></path>
+                                          </svg>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                          <li><a class="dropdown-item" href="#"> <i class="fas fa-eye"></i> عرض</a></li>
+                                          <li><a class="dropdown-item" href="#"> <i class="fas fa-edit"></i> تعديل</a></li>
+                                          <li><a class="dropdown-item" href="#CloseModal" class="trigger-btn" data-bs-toggle="modal"> <i class="fas fa-trash"></i> حذف</a></li>
+                                        </ul>
+                                      </div>
+
+                                    </td>
+                                </tr>
+
+                               
+                                </tbody>
+                                                      
+                            </table>
+
+                            <div class="pagination d-flex justify-content-center mt-3">
+                              <a href="#" class="pagination-num active">1</a>
+                              <a href="#" class="pagination-num">2</a>
+                              <a href="#" class="pagination-num">3</a>
                             </div>
+                        </div>
                       </div>
 
                     <!-- End Complete Application # Tab3-->
