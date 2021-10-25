@@ -1,6 +1,6 @@
 $(function() {
 
-  $('.js-check-all').on('click', function() {
+  /*$('.js-check-all').on('click', function() {
 
   	if ( $(this).prop('checked') ) {
 	  	$('th input[type="checkbox"]').each(function() {
@@ -46,10 +46,10 @@ $(function() {
     else{
       $('.approave-btn').prop('disabled',true)
     }
-});
+});*/
 
 /******######### check on click #############**************/
-$(".clickable").click(function(e){
+/*$(".clickable").click(function(e){
   //if (e.target.type != 'checkbox'){
     var cb = $(this).closest('tr').find("input[type=checkbox]");
     cb.trigger('click');
@@ -64,7 +64,7 @@ $(".clickable").click(function(e){
       console.log(a.filter(":checked").length);
     }
  // }
-});
+});*/
 
 
 /**############# get selected option to change backgroun #############*/
@@ -111,4 +111,10 @@ $(".clickable").click(function(e){
       $(this).closest('tr').find('td.approve').append('<div class="dark-red" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> تعيين  </div>');
   });
 })*/
+
+
+/******* href on table row click *************/
+$('*[data-href]').on('click', function() {
+  window.location = $(this).data("href");
+});
 });
