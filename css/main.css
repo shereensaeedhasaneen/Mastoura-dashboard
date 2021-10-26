@@ -1452,4 +1452,64 @@ footer .footer-text {
   padding: 15px 15px 15px 10px;
 }
 
+.details-table {
+  border-collapse: separate;
+  border-spacing: 10px 0;
+  margin-bottom: 30px;
+}
+.details-table thead {
+  min-height: 50px;
+}
+.details-table thead th.first {
+  border-radius: 8px;
+  background: #454545;
+  font-family: "Tajawal";
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  color: #f7f6f4;
+}
+.details-table thead th.small-th {
+  width: 146px;
+  border-radius: 8px;
+  background: #454545;
+  font-family: "Tajawal";
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+}
+.details-table tbody > tr:nth-of-type(even) {
+  background: #f8f6f6;
+}
+.details-table .row-data {
+  font-family: "Tajawal";
+  font-weight: normal;
+  font-size: 18px;
+  color: #454545;
+  border-radius: 8px;
+  max-width: 146px;
+  word-wrap: break-word;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.details-table .total-price {
+  font-family: "Tajawal";
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  color: #f7f6f4;
+  border-radius: 8px;
+}
+.details-table .total-text {
+  padding-right: 20px;
+}
+.details-table tfoot {
+  background: #DF2024;
+}
+
+.mt-60 {
+  margin-top: 55px !important;
+}
+
 /*# sourceMappingURL=main.css.map */
