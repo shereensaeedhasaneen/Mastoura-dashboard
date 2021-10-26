@@ -80,15 +80,20 @@ $(function() {
       $(this).closest("div").addClass('green');
   //   $('.nice-select ul').css('visibility','hidden')
     }
-    if(selected_text=='قيد الدراسه'){
+    else if(selected_text=='قيد الدراسه'){
       $(this).closest("div").removeClass();
       $(this).closest("div").addClass('orange');
      // $('ul.list').css('visibility','hidden')
     }
-    if(selected_text=='مرفوض'){
+    else if(selected_text=='مرفوض'){
       $(this).closest("div").removeClass();
       $(this).closest("div").addClass('red');
      // $('ul.list').css('visibility','hidden')
+    }
+
+    else{
+      $(this).closest("div").removeClass();
+      $(this).closest("div").addClass('orange');
     }
   
  })
