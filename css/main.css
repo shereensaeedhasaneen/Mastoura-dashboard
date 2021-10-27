@@ -907,6 +907,10 @@ footer .footer-text {
   font-size: 20px !important;
 }
 
+.fs-18 {
+  font-size: 18px !important;
+}
+
 .first-container {
   min-height: 220px;
   border-radius: 16px;
@@ -1186,6 +1190,19 @@ footer .footer-text {
   margin-bottom: 8px;
   width: 100%;
   word-wrap: break-word;
+}
+.second-container .edit {
+  width: 83px;
+  height: 34px;
+  background: #df2024;
+  border: 1px solid #ededed;
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.13));
+  border-radius: 8px;
+  font-family: "Tajawal";
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
 }
 
 .third-container nav {

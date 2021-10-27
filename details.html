@@ -318,6 +318,51 @@
 </div>
 <!-- end popup-->
 
+<!--Number of insurance Modal -->
+<div class="modal fade" id="mount-of-loan-staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+        <div class="row">
+
+          <div class="col-12">
+            <p class="notes mb-2 mt-2">تحديد قيمة القرض </p>
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <div class="col-7">
+                <input type="text" class="insurance-num w-100" placeholder=" ١١٥٠٠ ">
+              </div>
+
+              <div class="col-5">
+                <p class="notes mb-2 mt-2 fs-18">قيمة القرض المطلوب &nbsp; ١٢،٠٠٠   </p>
+              </div>
+            </div>
+           
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="modal-footer d-flex justify-content-center">
+
+              <div class="col-4">
+                <button type="button" class="save done">حفظ</button>
+              </div>
+             <div class="col-3">
+               
+             </div>
+              <div class="col-4">
+                <button type="button" class="cancel close" data-bs-dismiss="modal">إلغاء</button>
+              </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Number of insurance popup-->
         <div class="container-fauld">
             
             <div class="row">
@@ -503,8 +548,11 @@
                                       <div class="col-6 labels">
                                         <p>  قيمة القرض المطلوب </p>
                                       </div>
-                                      <div class="col-6 data text-break">
+                                      <div class="col-3 data text-break">
                                         <p> ١٢،٠٠٠</p>
+                                      </div>
+                                      <div class="col-3 data text-break">
+                                        <button class="edit" data-bs-toggle="modal" data-bs-target="#mount-of-loan-staticBackdrop"> تعديل  </button>
                                       </div>
                                     </div>
 
