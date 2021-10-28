@@ -1156,7 +1156,6 @@ footer .footer-text {
   border-radius: 16px;
   background: #fff;
   border: 1px solid #707070;
-  margin-left: 20px;
   padding-top: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
@@ -1211,6 +1210,19 @@ footer .footer-text {
 .third-container nav .nav-tabs {
   border-bottom: none;
 }
+.third-container nav button {
+  width: calc(100%/5.21) !important;
+}
+@media (max-width: 1400px) {
+  .third-container nav button {
+    width: calc(100%/5.29) !important;
+  }
+}
+@media (min-width: 1401px) and (max-width: 1590px) {
+  .third-container nav button {
+    width: calc(100%/5.22) !important;
+  }
+}
 .third-container nav button:first-child {
   margin-right: 0 !important;
 }
@@ -1223,7 +1235,6 @@ footer .footer-text {
   color: #fff !important;
 }
 .third-container nav button:not(.active) {
-  width: 198.3px !important;
   border-radius: 8px 8px 0px 0px;
   background: transparent;
   border: 2px solid #DF2024;
@@ -1232,10 +1243,14 @@ footer .footer-text {
   font-size: 22px;
   text-align: center;
   color: #DF2024;
-  margin-right: 12px;
+  margin-right: 10.4px;
+}
+@media (max-width: 1400px) {
+  .third-container nav button:not(.active) {
+    margin-right: 12.2px;
+  }
 }
 .third-container nav .active {
-  width: 198.3px !important;
   border-radius: 8px 8px 0px 0px !important;
   background: #DF2024 !important;
   border: 2px solid #DF2024 !important;
@@ -1244,7 +1259,12 @@ footer .footer-text {
   font-size: 22px !important;
   text-align: center !important;
   color: #fafafa !important;
-  margin-right: 12px;
+  margin-right: 10.4px;
+}
+@media (max-width: 1400px) {
+  .third-container nav .active {
+    margin-right: 12.2px;
+  }
 }
 .third-container .tab-content {
   width: 100%;
@@ -1335,6 +1355,88 @@ footer .footer-text {
   font-size: 18px;
   text-align: center;
   color: #fff;
+}
+.third-container .upload-files button {
+  width: 83px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid #ededed;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.13);
+  font-family: "Tajawal";
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+}
+.third-container .upload-files .edit {
+  background: #DF2024;
+  padding-top: 1px;
+}
+.third-container .upload-files .delete {
+  background: #454545;
+}
+.third-container .upload-files input[type=file] {
+  display: none;
+}
+.third-container .upload-files label {
+  cursor: pointer;
+}
+.third-container .upload-files .span-text {
+  margin-right: 20px;
+  font-family: "Tajawal";
+  font-weight: normal;
+  font-size: 20px;
+  color: #454545;
+}
+.third-container .upload-files .empty-container {
+  display: none;
+}
+.third-container .upload-files .empty-text {
+  font-family: "Tajawal";
+  color: #454545;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 40px;
+}
+.third-container .upload-files hr {
+  border: 1px solid #707070;
+}
+.third-container .upload-files .plus {
+  cursor: pointer;
+  width: 40px;
+  height: 41px;
+  background: transparent;
+  border: 1px dashed #454545;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.third-container .upload-files .plus span {
+  font-family: "Tajawal";
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  color: #DF2024;
+  margin: 0;
+  padding-bottom: 6px;
+}
+.third-container .upload-files .plus:hover {
+  background: #DF2024;
+  border: none;
+}
+.third-container .upload-files .plus:hover span {
+  color: #fff;
+}
+.third-container .upload-files .plus-text {
+  font-family: "Tajawal";
+  font-weight: normal;
+  font-size: 22px;
+  color: #454545;
+  margin-right: 15px;
+  cursor: pointer;
+  margin-bottom: 0;
 }
 
 .insurance-num {
@@ -1527,6 +1629,32 @@ footer .footer-text {
 
 .mt-60 {
   margin-top: 55px !important;
+}
+
+.swal2-title {
+  color: #454545;
+  font-family: "Tajawal";
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.swal2-confirm.swal2-styled {
+  background: #DF2024 !important;
+  color: #fff !important;
+  border-radius: 8px;
+  width: 90px;
+}
+.swal2-confirm.swal2-styled:focus {
+  box-shadow: none !important;
+}
+
+.swal2-cancel.swal2-styled {
+  background: #6C6C6C !important;
+  border-radius: 8px;
+  width: 90px;
+}
+.swal2-cancel.swal2-styled:focus {
+  box-shadow: none !important;
 }
 
 /*# sourceMappingURL=main.css.map */
