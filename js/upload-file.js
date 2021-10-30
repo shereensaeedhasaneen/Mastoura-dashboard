@@ -1,10 +1,24 @@
 
 
+
+    $('.file-input-container').each(function(index ,element) {
+      var hr_width=400 - ($(this).find('.span-text').width()
+      + $(this).find('.for-sm-input-file').width()+50)
+      $(this).find('.attach-divider').css('width', hr_width+'px');
+      //console.log($(element).width() )
+    }); 
+
   $(".row").on("change", ".sm-input-file", function() {
     var name = event.target.files[0].name;
     //$('.span-text').text(name);
     $(this).closest('.file-input-container').find('.span-text').text(name);
     $(this).closest('.file-input-container').find('.span-text').attr('href','img/'+name);
+    /*console.log($(this).closest('.file-input-container').width() - ($(this).closest('.file-input-container').find('.span-text').width()
+    + $(this).closest('.file-input-container').find('.for-sm-input-file').width()) +'px'
+    )*/
+    var hr_width=$(this).closest('.file-input-container').width() - ($(this).closest('.file-input-container').find('.span-text').width()
+    + $(this).closest('.file-input-container').find('.for-sm-input-file').width()+50)
+    $(this).closest('.file-input-container').find('.attach-divider').css('width', hr_width+'px');
   });
 
 $('.add-row').on('click' , function(){
@@ -19,7 +33,8 @@ $('.add-row').on('click' , function(){
                                         </svg>
                                     </label>
                                     <input type="file" class="sm-input-file" id="sm-ip-${numItems+1}"/>
-                                    <a target="_blank" class="span-text">لم يتم اختيار الملف</a>
+                                    <a href="#" target="_blank" class="span-text">لم يتم اختيار الملف</a>
+                                    <hr class="attach-divider">
                                     </div>
                                 </div>
                                 <div class="col-2 d-flex justify-content-end align-items-center">
@@ -31,6 +46,12 @@ $('.add-row').on('click' , function(){
                                 </div>
                             </div>`);
 
+                            $('.file-input-container').each(function(index ,element) {
+                              var hr_width=600 - ($(this).find('.span-text').width()
+                              + $(this).find('.for-sm-input-file').width()+50)
+                              $(this).find('.attach-divider').css('width', hr_width+'px');
+                              //console.log($(element).width() )
+                            }); 
   // to hide empty div
     var numItems = $('.sm-input-file').length;
     if(numItems>=1){

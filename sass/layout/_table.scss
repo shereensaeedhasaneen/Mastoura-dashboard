@@ -403,8 +403,8 @@ $orange-color:#fd844b;
         color: #454545;
         transition: 0.5s;
         &:hover{
-            background: $mainCol;
-            border: 1px solid $mainCol;
+            background: $txtCol;
+            border: 1px solid $txtCol;
             color: #fff;
         }
         
@@ -638,9 +638,9 @@ table.dataTable>thead .sorting:before, table.dataTable>thead .sorting_asc:before
             border-radius: 13px !important;
             border: 1px solid #ededed;
             &:hover{
-                border: 1px solid $mainCol !important;
+                border: 1px solid $txtCol !important;
                 background: transparent !important;
-                color: $mainCol;
+                color: $txtCol;
             }
         }
     }

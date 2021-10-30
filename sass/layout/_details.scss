@@ -27,7 +27,7 @@
     .data {
         p{
             font-family: "Tajawal";
-            font-weight: normal;
+            font-weight: 600;
             font-size: 18px;
             text-align: right;
             color: $txtCol;
@@ -283,7 +283,7 @@
 .second-container{
     .title{
         font-family: "Tajawal";
-        font-weight: normal;
+        font-weight: bold;
         font-size: 22px;
         text-align: right;
         color: $txtCol;
@@ -331,8 +331,8 @@
     .data {
         p{
             font-family: "Tajawal";
-            font-weight: normal;
-            font-size: 18px;
+            font-weight: 600;
+            font-size: 17px;
             text-align: right;
             color: $txtCol;
             margin-bottom: 8px;
@@ -441,7 +441,7 @@
           
           /* Track */
           &::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 5px grey; 
+            box-shadow: inset 0 0 5px white; 
             border-radius: 10px;
             border-bottom-left-radius: 13px;
             border-bottom-right-radius: 13px;
@@ -450,7 +450,7 @@
            
           /* Handle */
           &::-webkit-scrollbar-thumb {
-            background: $txtCol; 
+            background: $mainCol; 
             border-radius: 10px;
             border-bottom-left-radius: 16px;
             border-bottom-right-radius: 16px;
@@ -458,17 +458,18 @@
           
           /* Handle on hover */
           &::-webkit-scrollbar-thumb:hover {
-            background: $mainCol;
+            background: $txtCol;
             cursor: pointer; 
           }
     }
 
     .title{
         font-family: "Tajawal";
-        font-weight: normal;
+        font-weight: bold;
         font-size: 22px;
         text-align: right;
         color: $txtCol;
+       
     }
 
     .labels{
@@ -488,7 +489,7 @@
     .data {
         p{
             font-family: "Tajawal";
-            font-weight: normal;
+            font-weight: 600;
             font-size: 18px;
             text-align: right;
             color: $txtCol;
@@ -869,3 +870,9 @@
         box-shadow: none !important;
     }
 }
+
+.attach-divider{
+   display: inline-block;
+    margin: 0 20px 0 0;
+}
+
