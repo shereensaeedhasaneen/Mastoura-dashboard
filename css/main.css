@@ -915,7 +915,7 @@ footer .footer-text {
 }
 
 .first-container {
-  min-height: 220px;
+  min-height: 90%;
   border-radius: 16px;
   background: #fff;
   border: 1px solid #707070;
@@ -1663,6 +1663,119 @@ footer .footer-text {
 .attach-divider {
   display: inline-block;
   margin: 0 20px 0 0;
+}
+
+.accept-div {
+  min-height: 220px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #707070;
+  padding-right: 26px;
+}
+.accept-div .divider hr {
+  width: 1px;
+  min-height: 93%;
+  background: transparent;
+  border: 1px solid #707070;
+}
+.accept-div i {
+  color: #289a43;
+  margin-left: 5px;
+}
+.accept-div p {
+  font-family: "Tajawal";
+  font-weight: normal;
+  font-size: 18px;
+  color: #454545;
+}
+.accept-div .buttonload {
+  background-color: #454545;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 16px;
+  font-family: "Tajawal";
+  font-weight: normal;
+  font-size: 18px;
+  color: #fff;
+}
+.accept-div .buttonload:focus .fa {
+  display: inline-block;
+}
+.accept-div .fa {
+  display: none;
+  color: #fff;
+}
+.accept-div .btn-text {
+  display: none;
+}
+
+.buttonload {
+  width: 80%;
+  text-align: right;
+  display: inline-block;
+  border: 1px solid gray;
+  outline: none;
+  padding: 10px 20px;
+  line-height: 1.4;
+  background: #454545;
+  border-radius: 16px;
+  font-family: "Tajawal";
+  color: white;
+  position: relative;
+  transition: padding-right 0.3s ease;
+  font-weight: 700;
+}
+.buttonload i {
+  color: #fff;
+}
+
+.buttonload.spinning {
+  background-color: #454545;
+  padding-right: 40px;
+}
+
+.buttonload.spinning:after {
+  content: "";
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  box-shadow: 0px 0px 0 1px #e6e6e6;
+  position: absolute;
+  border-radius: 50%;
+  animation: rotate360 0.5s infinite linear, exist 0.1s forwards ease;
+}
+
+.buttonload.spinning:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  right: 6px;
+  top: 50%;
+  position: absolute;
+  border: 2px solid #999999;
+  border-right: 3px solid #fff;
+  animation: rotate360 0.5s infinite linear, exist 0.1s forwards ease;
+}
+
+@keyframes rotate360 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes exist {
+  100% {
+    width: 15px;
+    height: 15px;
+    margin: -8px 5px 0 0;
+  }
+}
+.final-accept-loan {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

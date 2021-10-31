@@ -60,16 +60,6 @@ $('.add-row').on('click' , function(){
 })
 
 
-/*$(".row").on("click", ".delete", function() {
-    $(this).closest('.row').remove();
-
-    // to diplay empty div
-    var numItems = $('.sm-input-file').length;
-    if(numItems==0){
-        $('.empty-container').css('display' , 'block');
-    }
-  });*/
-
   $('.row').on('click',".delete",function(){
     Swal.fire({
       title: 'هل انت متأكد من حذف هذا الملف',
@@ -99,4 +89,25 @@ $('.add-row').on('click' , function(){
   })
   
 
-  
+  /////////////////////////
+    
+    
+   // buttonload.addEventListener("click", function() {
+     $('.buttonload').on('click',function(){
+      //buttonload.classList.add('spinning');
+        $(this).addClass('spinning')
+      setTimeout( 
+              ()=>{  
+              $(this).removeClass('spinning');
+              //$(this).text($(this).find('.btn-text').css('display' , 'block'));
+              $(this).find('.btn-text').css('display' , 'inline-block')
+              $(this).css('background' , '#289a43')
+              //buttonload.disabled = true;
+              $(this).prop('disabled',true);
+              if($(".buttonload").length==$(".buttonload:disabled").length){
+                $('.final-accept-loan').css('display' , 'block')
+              }
+            }, 1500);
+           
+  });
+
