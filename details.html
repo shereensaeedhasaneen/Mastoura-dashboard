@@ -83,10 +83,8 @@
                 </g>
               </svg>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+          <div id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
             </ul>
             <div class="d-flex notification">
@@ -369,7 +367,7 @@
             <div class="row">
               
               <!--Right Side -->
-                <div class="col-3">
+                <div class="d-none d-lg-flex col-lg-3">
                   <div class="sidebar">
                     
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -399,7 +397,7 @@
               <!--End Right Side -->
 
               <!-- Left Side -->
-                <div class="col-9">
+                <div class=" col-12 col-sm-12 col-lg-9">
                   <div class="tab-content" id="buttonsTabContent">
 
                     <!--All Applications #tab1-->
@@ -407,10 +405,10 @@
                         <div class="row mb-2">
                           
                           <!-- First Container in details -->
-                            <div class="col-11 first-container">
+                            <div class="col-sm-12 col-lg-11 first-container">
                                 <div class="row h-100 d-flex align-items-center">
                                   <!--Labels-->
-                                    <div class="col-4 pt-3 pb-3">
+                                    <div class="col-sm-12 col-lg-4 pt-3 pb-3">
                                        <!--رقم الطلب-->
                                        <div class="row">
                                         <div class="col-6 labels">
@@ -465,7 +463,7 @@
                                   
 
                                     <!--Select status & print Button-->
-                                    <div class="col-3 d-flex flex-column align-items-end">
+                                    <div class="d-none col-lg-3 d-lg-flex flex-column align-items-end">
                                       <div class="orange">
                                        
                                         <select name="" class="status" id="">
@@ -477,7 +475,7 @@
                                         </select>
                                       </div>
 
-                                      <button class="print">
+                                      <button class="print" onclick="window.print();">
                                         طباعة
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18">
                                           <g id="Icon_print_solid" transform="translate(-2 -3)">
@@ -492,14 +490,14 @@
                                     </div>
 
                                     <!--Divider-->
-                                    <div class="col-1 d-flex justify-content-center">
+                                    <div class="d-none col-lg-1 d-lg-flex justify-content-center">
                                         <div class="divider">
                                           <hr>
                                         </div>
                                     </div>
 
                                     <!-- Accept & Reject Buttons-->
-                                    <div class="col-4">
+                                    <div class="d-none col-lg-4 d-lg-block">
                                       <button class="accept-loan" data-bs-toggle="modal" data-bs-target="#Accept-Loan-staticBackdrop">الموافقة على القرض</button>
                                       <button class="reject-loan" data-bs-toggle="modal" data-bs-target="#ignore-Loan-staticBackdrop">رفض القرض</button>
                                     </div>
@@ -508,7 +506,7 @@
                            <!-- End First Container in details -->
 
                           <!-- Second Container in details -->
-                            <div class="col-sm-11 second-container mt-4">
+                            <div class="col-12 col-lg-11 second-container mt-4">
                                 <div class="row d-flex justify-content-between">
                                   <div class="col-sm-6 Applicant-data">
                                     <h3 class="title mb-3"> بيانات مقدم الطلب</h3>
@@ -1647,9 +1645,838 @@
                             </div>
                          <!-- End Third Container in details-->
 
+<!--###################################### Tabs in Print ##################################################################-->
+                           
+                            <!--تفاصيل الطلب-->
+                              <div class="col-12 col-lg-11 mt-4 third-container third-in-print">
+                                  <h1>تفاصيل الطلب</h1>
+                                  <!-- تفاصيل الطلب-->
+                                    <div class="row tab-data">
+                                      <div class="col-5">
+                                        <h3 class="title mb-3">   البيانات الشخصية</h3>
+                                          <!-- تاريخ الميلاد   -->
+                                          <div class="row">
+                                            <div class="col-6 labels">
+                                              <p> تاريخ الميلاد   </p>
+                                            </div>
+                                            <div class="col-6 data text-break">
+                                              <p>   ٢٣-٠٣-١٩٦٧</p>
+                                            </div>
+                                          </div>
+
+                                          <!--   الحالة الاجتماعية -->
+                                          <div class="row">
+                                            <div class="col-6 labels">
+                                              <p>    الحالة الاجتماعية  </p>
+                                            </div>
+                                            <div class="col-6 data text-break">
+                                              <p> متزوجة</p>
+                                            </div>
+                                          </div>
+
+                                            <!--    عدد الأطفال  -->
+                                            <div class="row">
+                                              <div class="col-6 labels">
+                                                <p>   عدد الأطفال   </p>
+                                              </div>
+                                              <div class="col-6 data text-break">
+                                                <p>    ٣</p>
+                                              </div>
+                                            </div>
+
+                                            <!--    أبناء من ذوي الاحتياجات الخاصة  -->
+                                            <div class="row">
+                                                <div class="col-6 labels">
+                                                  <p>      أبناء من ذوي الاحتياجات الخاصة </p>
+                                                </div>
+                                                <div class="col-6 data text-break">
+                                                  <p> لا يوجد </p>
+                                                </div>
+                                            </div>
+
+                                            <!--    عنوان مقدم الطلب   -->
+                                            <div class="row">
+                                              <div class="col-6 labels">
+                                                <p>     عنوان مقدم الطلب   
+                                                  <br>
+                                                  <span style="font-size: 14px;">(العنوان الفعلي)</span>
+                                                </p>
+                                              </div>
+                                              <div class="col-6 data text-break">
+                                                <p> منى عبدالله حسين </p>
+                                                <p>المحافظة</p>
+                                                <p>المدينة / المركز</p>
+                                              </div>
+                                            </div>
+
+                                            <!--      الرقم التأميني    -->
+                                            <div class="row">
+                                              <div class="col-4 labels">
+                                                <p>      الرقم التأميني </p>
+                                              </div>
+                                              <div class="col-6 data text-break">
+                                                <p> ٨٧٦٢٣٤٣٢٤٧٧  </p>
+                                              </div>
+                                              <div class="col-2 data text-break">
+                                                <button class="edit" data-bs-toggle="modal" data-bs-target="#Num-of-insurance-staticBackdrop"> تعديل  </button>
+                                              </div>
+                                            </div>
+
+                                            <h3 class="title mb-3">    سداد رسوم الطلب</h3>
+                                            <!--      رقم إيصال الدفع     -->
+                                            <div class="row">
+                                              <div class="col-6 labels">
+                                                <p>      رقم إيصال الدفع  </p>
+                                              </div>
+                                              <div class="col-6 data text-break">
+                                                <p> ٨٧٦٢٣٤٣٢٤٧٧  </p>
+                                              </div>
+                                            </div>
+                                      </div>
+
+                                      <div class="col-1 divider">
+                                        <hr>
+                                      </div>
+
+                                      <div class="col-6">
+                                        <h3 class="title mb-3"> بيانات المشروع </h3>
+                                          <!--   الخبرات السابقة   -->
+                                          <div class="row">
+                                            <div class="col-6 labels">
+                                              <p>   الخبرات السابقة   </p>
+                                            </div>
+                                            <div class="col-6 data text-break">
+                                              <p>   لا يوجد</p>
+                                            </div>
+                                          </div>
+
+                                          <!--   سنوات الخبرة -->
+                                          <div class="row">
+                                            <div class="col-6 labels">
+                                              <p>    سنوات الخبرة  </p>
+                                            </div>
+                                            <div class="col-6 data text-break">
+                                              <p> ٠</p>
+                                            </div>
+                                          </div>
+
+                                            <!--    مقر المشروع  -->
+                                            <div class="row">
+                                              <div class="col-6 labels">
+                                                <p>   مقر المشروع   </p>
+                                              </div>
+                                              <div class="col-6 data text-break">
+                                                <p>    إيجار</p>
+                                              </div>
+                                            </div>
+
+                                            <!--    عنوان مقر المشروع  -->
+                                            <div class="row">
+                                                <div class="col-6 labels">
+                                                  <p>      عنوان مقر المشروع </p>
+                                                </div>
+                                                <div class="col-6 data text-break">
+                                                  <p> تثق نايس ددت </p>
+                                                  <p>المحافظة</p>
+                                                  <p>المدينة / المركز</p>
+                                                </div>
+                                            </div>
+
+                                            <!--    شركاء آخرون   -->
+                                            <div class="row">
+                                              <div class="col-6 labels">
+                                                <p>     شركاء آخرون   </p>
+                                              </div>
+                                              <div class="col-6 data text-break">
+                                                <p> لا يوجد </p>
+                                              </div>
+                                            </div>
+
+                                            <!--      وصف المشروع    -->
+                                            <div class="row">
+                                              <div class="col-6 labels">
+                                                <p>      وصف المشروع </p>
+                                              </div>
+                                              <div class="col-6 data text-break">
+                                                <p> ورشة تفصيل ملابس
+                                                  نسايت تينطم ني دزذشتست تنشي نن ثث ممي خصضحث طنش .حي لشي 
+                                                    </p>
+                                              </div>
+                                            </div>
+                                      </div>
+                                    </div>           
+                              </div>
+                             
+                               <!-- بحث أجتماعى-->
+                               <div class="col-12 col-lg-11 mt-4 third-container third-in-print pagebreak">
+                                <h1>بحث أجتماعى</h1>
+                                <div class="row tab-data">
+                                  <div class="col-5">
+                                    <h3 class="title mb-3">    بيانات عن الأسرة  </h3>
+                                      <!--  اسم الزوج    -->
+                                      <div class="row">
+                                        <div class="col-6 labels">
+                                          <p>  اسم الزوج    </p>
+                                        </div>
+                                        <div class="col-6 data text-break">
+                                          <p>  محمد مصطفى سامي</p>
+                                        </div>
+                                      </div>
+
+                                      <!--      الرقم القومى -->
+                                      <div class="row">
+                                        <div class="col-6 labels">
+                                          <p>      الرقم القومى   </p>
+                                        </div>
+                                        <div class="col-6 data text-break">
+                                          <p> ٢٧٨٥٦٤١٢٠٨٣٣١٣</p>
+                                        </div>
+                                      </div>
+
+                                      <!--       السن -->
+                                      <div class="row">
+                                        <div class="col-6 labels">
+                                          <p>      السن    </p>
+                                        </div>
+                                        <div class="col-6 data text-break">
+                                          <p> ٥٠</p>
+                                        </div>
+                                      </div>
+
+                                       <!--       تليفون محمول -->
+                                       <div class="row">
+                                        <div class="col-6 labels">
+                                          <p>      تليفون محمول    </p>
+                                        </div>
+                                        <div class="col-6 data text-break">
+                                          <p> ٠١٢٣٤٥٦٧٨٩٠</p>
+                                        </div>
+                                      </div>
+
+                                        <!--       الوظيفة -->
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>      الوظيفة    </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p> سائق</p>
+                                          </div>
+                                        </div>
+                                       <!--       الدخل -->
+                                       <div class="row">
+                                        <div class="col-6 labels">
+                                          <p>      الدخل    </p>
+                                        </div>
+                                        <div class="col-6 data text-break">
+                                          <p> ١٠٠٠</p>
+                                        </div>
+                                      </div>
+
+                                      <!--divider-->
+                                        <div class="row">
+                                          <div class="col-3 hr">
+                                              <hr>
+                                          </div>
+                                        </div>
+
+                                        <!--     عدد الابناء   -->
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>    عدد الابناء    </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p>    ٢  </p>
+                                          </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-8 social-research-card">
+                                              <!--     اسم الابن    -->
+                                              <div class="row">
+                                                <div class="col-6 labels">
+                                                  <p>    اسم الابن     </p>
+                                                </div>
+                                                <div class="col-6 data text-break">
+                                                  <p>    احمد محمد مصطفى  </p>
+                                                </div>
+                                              </div>
+
+                                              <!--     تاريخ الميلاد     -->
+                                              <div class="row">
+                                                <div class="col-6 labels">
+                                                  <p>    تاريخ الميلاد      </p>
+                                                </div>
+                                                <div class="col-6 data text-break">
+                                                  <p>      ١٢/٩/١٩٩٠  </p>
+                                                </div>
+                                              </div>
+
+                                              <!--      الحالة الاجتماعية     -->
+                                              <div class="row">
+                                                <div class="col-6 labels">
+                                                  <p>    الحالة الاجتماعية       </p>
+                                                </div>
+                                                <div class="col-6 data text-break">
+                                                  <p>   اعزب</p>
+                                                </div>
+                                              </div>
+
+                                              <!--       المرحلة التعليمية     -->
+                                              <div class="row">
+                                                <div class="col-6 labels">
+                                                  <p>    المرحلة التعليمية        </p>
+                                                </div>
+                                                <div class="col-6 data text-break">
+                                                  <p>   شهادة متوسطة</p>
+                                                </div>
+                                              </div>
+
+                                              <!--       الوظيفة      -->
+                                              <div class="row">
+                                                <div class="col-6 labels">
+                                                  <p>    الوظيفة         </p>
+                                                </div>
+                                                <div class="col-6 data text-break">
+                                                  <p>   مدرس </p>
+                                                </div>
+                                              </div>
+
+                                              <!--       الدخل      -->
+                                              <div class="row">
+                                                <div class="col-6 labels">
+                                                  <p>    الدخل         </p>
+                                                </div>
+                                                <div class="col-6 data text-break">
+                                                  <p>   ١٠٠٠ </p>
+                                                </div>
+                                              </div>
+
+                                              <!--       مقيم بالمنزل      -->
+                                              <div class="row">
+                                                <div class="col-6 labels">
+                                                  <p>    مقيم بالمنزل         </p>
+                                                </div>
+                                                <div class="col-6 data text-break">
+                                                  <p>   نعم </p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                          <div class="col-8 mt-2 social-research-card">
+                                            <!--     اسم الابن    -->
+                                            <div class="row">
+                                              <div class="col-6 labels">
+                                                <p>    اسم الابن     </p>
+                                              </div>
+                                              <div class="col-6 data text-break">
+                                                <p>    احمد محمد مصطفى  </p>
+                                              </div>
+                                            </div>
+
+                                            <!--     تاريخ الميلاد     -->
+                                            <div class="row">
+                                              <div class="col-6 labels">
+                                                <p>    تاريخ الميلاد      </p>
+                                              </div>
+                                              <div class="col-6 data text-break">
+                                                <p>      ١٢/٩/١٩٩٠  </p>
+                                              </div>
+                                            </div>
+
+                                            <!--      الحالة الاجتماعية     -->
+                                            <div class="row">
+                                              <div class="col-6 labels">
+                                                <p>    الحالة الاجتماعية       </p>
+                                              </div>
+                                              <div class="col-6 data text-break">
+                                                <p>   اعزب</p>
+                                              </div>
+                                            </div>
+
+                                            <!--       المرحلة التعليمية     -->
+                                            <div class="row">
+                                              <div class="col-6 labels">
+                                                <p>    المرحلة التعليمية        </p>
+                                              </div>
+                                              <div class="col-6 data text-break">
+                                                <p>   شهادة متوسطة</p>
+                                              </div>
+                                            </div>
+
+                                            <!--       الوظيفة      -->
+                                            <div class="row">
+                                              <div class="col-6 labels">
+                                                <p>    الوظيفة         </p>
+                                              </div>
+                                              <div class="col-6 data text-break">
+                                                <p>   مدرس </p>
+                                              </div>
+                                            </div>
+
+                                            <!--       الدخل      -->
+                                            <div class="row">
+                                              <div class="col-6 labels">
+                                                <p>    الدخل         </p>
+                                              </div>
+                                              <div class="col-6 data text-break">
+                                                <p>   ١٠٠٠ </p>
+                                              </div>
+                                            </div>
+
+                                            <!--       مقيم بالمنزل      -->
+                                            <div class="row">
+                                              <div class="col-6 labels">
+                                                <p>    مقيم بالمنزل         </p>
+                                              </div>
+                                              <div class="col-6 data text-break">
+                                                <p>   نعم </p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      </div>
+
+                                        <!--     مصادر اخرى للدخل    -->
+                                        <div class="row mt-2">
+                                          <div class="col-6 labels">
+                                            <p>     مصادر اخرى للدخل    </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p>    لا يوجد  </p>
+                                          </div>
+                                        </div>
+
+
+                                        <!--      اجمالي الدخل   -->
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>    اجمالي الدخل     </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p>    ٢٠٠٠  </p>
+                                          </div>
+                                        </div>
+                                  </div>
+
+                                  <div class="col-1 divider">
+                                    <hr>
+                                  </div>
+
+                                  <div class="col-6">
+                                    <h3 class="title mb-3">   بيانات عن حالة المنزل   </h3>
+                                      <!--    ملكيه المنزل    -->
+                                      <div class="row">
+                                        <div class="col-6 labels">
+                                          <p>    ملكيه المنزل    </p>
+                                        </div>
+                                        <div class="col-6 data text-break">
+                                          <p>  إيجار </p>
+                                        </div>
+                                      </div>
+
+                                      <!--     قيمة الايجار -->
+                                      <div class="row">
+                                        <div class="col-6 labels">
+                                          <p>    قيمة الايجار    </p>
+                                        </div>
+                                        <div class="col-6 data text-break">
+                                          <p> 5000</p>
+                                        </div>
+                                      </div>
+
+                                        <!--      عدد الغرف  -->
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>   عدد الغرف     </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p>    3</p>
+                                          </div>
+                                        </div>
+
+                                        <!--      حمام مشترك   -->
+                                        <div class="row">
+                                            <div class="col-6 labels">
+                                              <p>       حمام مشترك   </p>
+                                            </div>
+                                            <div class="col-6 data text-break">
+                                              <p> نعم   </p>
+                                            </div>
+                                        </div>
+
+                                        <!--      حالة المنزل   -->
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>      حالة المنزل    </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p>  متوسطة </p>
+                                          </div>
+                                        </div>
+
+                                        <!--      أحتياجات المنزل    -->
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>      أحتياجات المنزل     </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p>  تصليح السقف/ تركيب بلاط </p>
+                                          </div>
+                                        </div>
+
+
+                                        <!--      حالة الأثاث    -->
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>      حالة الأثاث     </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p>  متوسطة </p>
+                                          </div>
+                                        </div>
+
+                                        <!--       تفصيلها    -->
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>      تفصيلها      </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p>  سرير/دولاب </p>
+                                          </div>
+                                        </div>
+
+
+                                        <!--       ملاحظات على حالة الأسرة    -->
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>      ملاحظات على حالة الأسرة      </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p>  وتقرر بدلا من ذلك أنه ينبغي أن تنص الحيثية على أن التفسيرات 
+                                              المختلفة نتجت جزئيا بسبب الاختلافات 
+                                              في التعبير في النصوص الأصلية للاتفاقية. </p>
+                                          </div>
+                                        </div>
+
+                                        <h3 class="title mb-3 mt-5">    الملف الطبي     </h3>
+
+                                        <!--       اسم المريض    -->
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>         اسم المريض      </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p> احمد </p>
+                                          </div>
+                                        </div>
+
+                                        <!--       نوع المرض       -->
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>      نوع المرض         </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p>   سكر </p>
+                                          </div>
+                                        </div>
+
+                                        <!--          اسماء الادويه    -->
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>         اسماء الادويه      </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p>    برستمول </p>
+                                          </div>
+                                        </div>
+
+                                        <h3 class="title mb-3 mt-5">     خبرات الاسره في مجال المشروع     </h3>
+
+                                        
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>          حيثيه علي ان التفسيرات المختلفه نتجت جزئيا بسبب الاختلاف في التعبير ف النصوص الاصليه ف الاتفاقيه      </p>
+                                          </div>
+                                         
+                                        </div>
+                                  </div>
+                                </div>  
+                              </div>
+                             
+                              <!--استعلام ميداني-->
+                              <div class="col-12 col-lg-11 mt-4 third-container third-in-print">
+                                <h1>استعلام ميداني</h1>
+                                <div class="row tab-data">
+                                  <div class="col-5">
+                                    <h3 class="title mb-3">   بيانات عن العميلة </h3>
+                                      <!--  سمعة العميلة   -->
+                                      <div class="row">
+                                        <div class="col-6 labels">
+                                          <p>  سمعة العميلة   </p>
+                                        </div>
+                                        <div class="col-6 data text-break">
+                                          <p>  جيدة</p>
+                                        </div>
+                                      </div>
+
+                                      <!--    سداد القروض سابقة -->
+                                      <div class="row">
+                                        <div class="col-6 labels">
+                                          <p>     سداد القروض سابقة  </p>
+                                        </div>
+                                        <div class="col-6 data text-break">
+                                          <p> منتظم</p>
+                                        </div>
+                                      </div>
+
+                                      <!--divider-->
+                                        <div class="row">
+                                          <div class="col-3 hr">
+                                              <hr>
+                                          </div>
+                                        </div>
+
+                                        <h3 class="title mb-3">    بيانات عن السكن  </h3>
+                                        <!--     وصف السكن  -->
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>    وصف السكن   </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p>    وتقرر بدلا من ذلك أنه ينبغي أن تنص الحيثية على أن التفسيرات 
+                                              المختلفة نتجت جزئيا بسبب الاختلافات .</p>
+                                          </div>
+                                        </div>
+
+                                        <!--        ملكية السكن  -->
+                                        <div class="row">
+                                            <div class="col-6 labels">
+                                              <p>       ملكية السكن </p>
+                                            </div>
+                                            <div class="col-6 data text-break">
+                                              <p> ايجار </p>
+                                            </div>
+                                        </div>
+
+                                        <!--      قيمة الإيجار الشهري    -->
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>       قيمة الإيجار الشهري   </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p> ١٠٠٠ </p>
+                                          </div>
+                                        </div>
+                                  </div>
+
+                                  <div class="col-1 divider">
+                                    <hr>
+                                  </div>
+
+                                  <div class="col-6">
+                                    <h3 class="title mb-3">  بيانات عن المشروع  </h3>
+                                      <!--    وصف المشروع   -->
+                                      <div class="row">
+                                        <div class="col-6 labels">
+                                          <p>   وصف المشروع    </p>
+                                        </div>
+                                        <div class="col-6 data text-break">
+                                          <p>   وتقرر بدلا من ذلك أنه ينبغي أن تنص الحيثية على أن التفسيرات 
+                                            المختلفة نتجت جزئيا بسبب الاختلافات 
+                                            في التعبير في النصوص الأصلية للاتفاقية. </p>
+                                        </div>
+                                      </div>
+
+                                      <!--    نوع المشروع -->
+                                      <div class="row">
+                                        <div class="col-6 labels">
+                                          <p>    نوع المشروع   </p>
+                                        </div>
+                                        <div class="col-6 data text-break">
+                                          <p> ايجار</p>
+                                        </div>
+                                      </div>
+
+                                        <!--     تكلفة المشروع  -->
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>   تكلفة المشروع    </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p>    ٢٠٠،٠٠٠</p>
+                                          </div>
+                                        </div>
+
+                                        <!--      العائد المتوقع  -->
+                                        <div class="row">
+                                            <div class="col-6 labels">
+                                              <p>       العائد المتوقع  </p>
+                                            </div>
+                                            <div class="col-6 data text-break">
+                                              <p> ١٠،٠٠٠   </p>
+                                            </div>
+                                        </div>
+
+                                        <!--     مدة المشروع   -->
+                                        <div class="row">
+                                          <div class="col-6 labels">
+                                            <p>      مدة المشروع   </p>
+                                          </div>
+                                          <div class="col-6 data text-break">
+                                            <p>  سنة </p>
+                                          </div>
+                                        </div>
+                                  </div>
+                                </div>   
+                              </div>
+                             
+                              <!--دراسة الجدوى-->
+                              <div class="col-12 col-lg-11 mt-4 third-container third-in-print pagebreak">
+                                <h1>دراسة الجدوى</h1>
+                                <div class="row d-flex justify-content-center">
+                                  <div class="col-11">
+                                    <h3 class="title mb-3 mt-60">    التكاليف الاستثمارية  </h3>
+                                    <table cellpadding="50"cellspacing="50" class="table details-table table-borderless">
+                                      <thead >
+                                        <tr>
+                                          <th class="first" colspan="2">البند</th>
+                                          <th class="small-th">الكمية</th>
+                                          <th class="small-th">سعر الوحدة</th>
+                                          <th class="small-th">الاجمالي</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td  class="row-data text-center"> 1 </td>
+                                          <td  class="row-data">الاقمشة </td>
+                                          <td class="text-center row-data" >3 </td>
+                                          <td class="text-center row-data">٢٠٠ جنية</td>
+                                          <td class="text-center row-data">٦٠٠ جنية</td>
+                                        </tr>
+
+                                        <tr>
+                                          <td  class="row-data text-center"> 2 </td>
+                                          <td  class="row-data" >  معدات كهربائية </td>
+                                          <td class="text-center row-data">٣</td>
+                                          <td class="text-center row-data">٢٠٠ جنية</td>
+                                          <td class="text-center row-data">٦٠٠ جنية</td>
+                                        </tr>
+
+                                        <tr>
+                                          <td  class="row-data text-center"> 3 </td>
+                                          <td  class="row-data">الماكينات </td>
+                                          <td class="text-center row-data">٣</td>
+                                          <td class="text-center row-data">٢٠٠ جنية</td>
+                                          <td class="text-center row-data">٦٠٠ جنية</td>
+                                        </tr>
+                                      </tbody>
+
+                                      <tfoot>
+                                        <tr>
+                                          <td colspan="4" class="text-start total-price total-text">  الاجمالي</td>
+                                          <td class="total-price">٣٠٠٠ جنية</td>
+                                        </tr>
+                                      </tfoot>
+                                    </table>
+
+                                    <h3 class="title mb-3 mt-60">    التكاليف الشهرية   </h3>
+                                    <table cellpadding="50"cellspacing="50" class="table details-table table-borderless">
+                                      <thead >
+                                        <tr>
+                                          <th class="first" colspan="2">البند</th>
+                                          <th class="small-th">الكمية</th>
+                                          <th class="small-th">سعر الوحدة</th>
+                                          <th class="small-th">الاجمالي</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td  class="row-data text-center"> 1 </td>
+                                          <td  class="row-data">الاقمشة </td>
+                                          <td class="text-center row-data" >3 </td>
+                                          <td class="text-center row-data">٢٠٠ جنية</td>
+                                          <td class="text-center row-data">٦٠٠ جنية</td>
+                                        </tr>
+
+                                        <tr>
+                                          <td  class="row-data text-center"> 2 </td>
+                                          <td  class="row-data" >  معدات كهربائية </td>
+                                          <td class="text-center row-data">٣</td>
+                                          <td class="text-center row-data">٢٠٠ جنية</td>
+                                          <td class="text-center row-data">٦٠٠ جنية</td>
+                                        </tr>
+
+                                        <tr>
+                                          <td  class="row-data text-center"> 3 </td>
+                                          <td  class="row-data">الماكينات </td>
+                                          <td class="text-center row-data">٣</td>
+                                          <td class="text-center row-data">٢٠٠ جنية</td>
+                                          <td class="text-center row-data">٦٠٠ جنية</td>
+                                        </tr>
+                                      </tbody>
+
+                                      <tfoot>
+                                        <tr>
+                                          <td colspan="4" class="text-start total-price total-text">  الاجمالي</td>
+                                          <td class="total-price">٣٠٠٠ جنية</td>
+                                        </tr>
+                                      </tfoot>
+                                    </table>
+
+
+                                    <h3 class="title mb-3  mt-60">    الإيرادات المتوقعة الشهرية   </h3>
+                                    <table cellpadding="50"cellspacing="50" class="table details-table table-borderless">
+                                      <thead >
+                                        <tr>
+                                          <th class="first" colspan="2">البند</th>
+                                          <th class="small-th">الكمية</th>
+                                          <th class="small-th">سعر الوحدة</th>
+                                          <th class="small-th">الاجمالي</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td  class="row-data text-center"> 1 </td>
+                                          <td  class="row-data">الاقمشة </td>
+                                          <td class="text-center row-data" >3 </td>
+                                          <td class="text-center row-data">٢٠٠ جنية</td>
+                                          <td class="text-center row-data">٦٠٠ جنية</td>
+                                        </tr>
+
+                                        <tr>
+                                          <td  class="row-data text-center"> 2 </td>
+                                          <td  class="row-data" >  معدات كهربائية </td>
+                                          <td class="text-center row-data">٣</td>
+                                          <td class="text-center row-data">٢٠٠ جنية</td>
+                                          <td class="text-center row-data">٦٠٠ جنية</td>
+                                        </tr>
+
+                                        <tr>
+                                          <td  class="row-data text-center"> 3 </td>
+                                          <td  class="row-data">الماكينات </td>
+                                          <td class="text-center row-data">٣</td>
+                                          <td class="text-center row-data">٢٠٠ جنية</td>
+                                          <td class="text-center row-data">٦٠٠ جنية</td>
+                                        </tr>
+                                      </tbody>
+
+                                      <tfoot>
+                                        <tr>
+                                          <td colspan="4" class="text-start total-price total-text">  الاجمالي</td>
+                                          <td class="total-price">٣٠٠٠ جنية</td>
+                                        </tr>
+                                      </tfoot>
+                                    </table>
+
+
+                                  </div>
+                                </div>
+                              </div>
+<!--########################3############# End Tabs in Print ##############################################################-->
                           <!-- Accept Button click-->
 
-                            <div class="col-11 mt-4 accept-div">
+                            <div class="col-12 col-lg-11 mt-4 accept-div">
                               <div class="row">
 
                                  <div class="col-5 pt-3 pb-3 position-relative">
@@ -1712,7 +2539,7 @@
                             </div>
                           <!--End Accept Button click-->
                           <!-- Fourth Row in details-->
-                              <div class="col-11 mt-5">
+                              <div class="col-12 col-lg-11 mt-5">
                                  <div class="row">
 
                                   <div class="col-4 p-0">
@@ -1745,7 +2572,7 @@
 
     <footer>
       <div class="row justify-content-end align-items-center h-100">
-          <div class="col-4">
+          <div class="col-6 col-lg-4">
             <p class="footer-text">® جميع الحقوق محفوظة | بنك ناصر الاجتماعي</p>
           </div>
       </div>

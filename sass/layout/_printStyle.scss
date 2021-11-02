@@ -1,0 +1,42 @@
+.third-in-print{
+    display: none;
+}
+@media print{
+    .second-container{
+        .edit{
+            display: none;
+        }
+    }
+
+    .third-container{
+        display: none;
+    }
+    .buttonload{
+        width: 100%;
+    }
+
+    .third-in-print{
+        display: block;
+        background: #fff;
+        border-radius: 16px;
+        border: 1px solid $txtCol;
+        h1{
+            font-family: 'Tajawal';
+            color: $mainCol;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .edit{
+            display: none;
+        }
+    }
+    .dropdown-toggle::after{
+        display: none;
+    }
+
+    .pagebreak{
+        page-break-before: always !important;
+    }
+}

@@ -147,7 +147,7 @@ nav .sec:hover {
   background-color: #BFBFBF;
 }
 nav .dropdown .dropdown-toggle {
-  padding-bottom: 17px;
+  padding-bottom: 8px;
   font-size: 16px;
   font-weight: 500;
   font-family: "Tajawal";
@@ -1207,37 +1207,97 @@ footer .footer-text {
   color: #fff;
 }
 
+.third-container {
+  /*nav{
+      background: transparent;
+      .nav-tabs{
+          border-bottom: none;
+      }
+
+      button{
+          width:calc(100%/5.21) !important;
+
+          @media (max-width:1400px) {
+              width:calc(100%/5.29) !important;
+          }
+          @media (min-width:1401px) and (max-width:1590px) {
+              width:calc(100%/5.22) !important;
+          }
+          &:first-child{
+              margin-right: 0 !important;
+          }
+          &:last-child{
+              margin-left: 0 !important;
+          }
+
+          &:hover{
+              background: $mainCol !important;
+              border-color: $mainCol !important;
+              color: #fff !important;
+          }
+      }
+      button:not(.active){
+
+          //width: 198.3px ;
+          border-radius: 8px 8px 0px 0px;
+          background: transparent;
+          border: 2px solid $mainCol;
+          font-family: 'Tajawal';
+          font-weight: 500;
+          font-size: 22px;
+          text-align: center;
+          color: $mainCol;
+           margin-right: 10.4px;//12px;
+           @media (max-width:1400px) {
+              margin-right: 12.2px
+          }
+          // margin-left: 10px;
+
+
+      }
+
+      .active{
+          //width: 198.3px ;
+          //height: 48px;
+          border-radius: 8px 8px 0px 0px !important;
+          background: $mainCol !important;
+          border: 2px solid $mainCol !important;
+          font-family: 'Tajawal' !important;
+          font-weight: 500 !important;
+          font-size: 22px !important;
+          text-align: center !important;
+          color: #fafafa !important;
+          margin-right: 10.4px;//12px;
+          @media (max-width:1400px) {
+              margin-right: 12.2px
+          }
+
+      }
+  }*/
+}
 .third-container nav {
   background: transparent;
 }
 .third-container nav .nav-tabs {
+  display: flex;
+  justify-content: space-between;
   border-bottom: none;
 }
-.third-container nav button {
-  width: calc(100%/5.21) !important;
+.third-container nav .nav-tabs button {
+  width: calc(100% / 5.16);
 }
-@media (max-width: 1400px) {
-  .third-container nav button {
-    width: calc(100%/5.29) !important;
-  }
-}
-@media (min-width: 1401px) and (max-width: 1590px) {
-  .third-container nav button {
-    width: calc(100%/5.22) !important;
-  }
-}
-.third-container nav button:first-child {
+.third-container nav .nav-tabs button:first-child {
   margin-right: 0 !important;
 }
-.third-container nav button:last-child {
+.third-container nav .nav-tabs button:last-child {
   margin-left: 0 !important;
 }
-.third-container nav button:hover {
+.third-container nav .nav-tabs button:hover {
   background: #DF2024 !important;
   border-color: #DF2024 !important;
   color: #fff !important;
 }
-.third-container nav button:not(.active) {
+.third-container nav .nav-tabs button:not(.active) {
   border-radius: 8px 8px 0px 0px;
   background: transparent;
   border: 2px solid #DF2024;
@@ -1246,14 +1306,9 @@ footer .footer-text {
   font-size: 22px;
   text-align: center;
   color: #DF2024;
-  margin-right: 10.4px;
+  border-bottom: none;
 }
-@media (max-width: 1400px) {
-  .third-container nav button:not(.active) {
-    margin-right: 12.2px;
-  }
-}
-.third-container nav .active {
+.third-container nav .nav-tabs .active {
   border-radius: 8px 8px 0px 0px !important;
   background: #DF2024 !important;
   border: 2px solid #DF2024 !important;
@@ -1262,12 +1317,6 @@ footer .footer-text {
   font-size: 22px !important;
   text-align: center !important;
   color: #fafafa !important;
-  margin-right: 10.4px;
-}
-@media (max-width: 1400px) {
-  .third-container nav .active {
-    margin-right: 12.2px;
-  }
 }
 .third-container .tab-content {
   width: 100%;
@@ -1776,6 +1825,50 @@ footer .footer-text {
 }
 .final-accept-loan {
   display: none;
+}
+
+.third-in-print {
+  display: none;
+}
+
+@media print {
+  .second-container .edit {
+    display: none;
+  }
+
+  .third-container {
+    display: none;
+  }
+
+  .buttonload {
+    width: 100%;
+  }
+
+  .third-in-print {
+    display: block;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #454545;
+  }
+  .third-in-print h1 {
+    font-family: "Tajawal";
+    color: #DF2024;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .third-in-print .edit {
+    display: none;
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  .pagebreak {
+    page-break-before: always !important;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
